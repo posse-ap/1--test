@@ -1,0 +1,415 @@
+@media screen and (max-width:375px) {
+ /* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+  /*　この位置に記述する　*/
+  header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header_left{
+    width: 15%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  .header_logo{
+    width: 100px;
+  }
+  header p{
+    font-size: 9px;
+  }
+  
+  .header_right{
+    margin-top: 10px;
+  }
+
+  .header_btn{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 172px;
+    height: 40px;
+    border: solid 0px #6091d3;/*線*/
+    border-radius: 40px;/*角の丸み*/
+    /* グラデーション */
+    font-weight: normal;background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
+    background-image: linear-gradient(90deg, #137DC4 40%, #38C7F9 100%);
+    font-size: 16px;
+     /* 縦横中央揃え */
+     text-align: center;
+     line-height: 40px;
+  }
+
+	main {
+		width: 100%;
+  }
+  
+  * {
+    float: none;
+    position: static;
+  }
+   
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+ 
+  body{
+    background-color: #F5F5F8;
+  }
+  .contents{
+    margin: 20px;
+  }
+  
+  .contents_left{
+
+  }
+  
+  .contents_right{
+    display: flex;
+    margin-top: 16px;
+  }
+  
+  .time {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin-bottom: 20px;
+    height: fit-content;
+  }
+  
+  .time_number{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .time_title{
+    margin: 10px 0 10px 0;
+    color: #0E71BC;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .time_hour{
+    margin: 10px 0 10px 0;
+    color: #9BBDD3;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .today {
+    border-radius: 10px;/*角の丸み*/
+    width: 33%;
+    height: fit-content;
+    background-color: white;
+  }
+  
+  .month {
+    margin: 0px 20px 0px 20px;
+    border-radius: 10px;/*角の丸み*/
+    width: 33%;
+    height: fit-content;
+    background-color: white;
+  }
+  .total {
+    border-radius: 10px;/*角の丸み*/
+    width: 33%;
+    height: fit-content;
+    background-color: white;
+  }
+  
+  .bargraph {
+    text-align: center;
+    display: inline-block;
+    height: fit-content;
+  }
+  
+  .bargraph img{
+    width: 100%;
+    border-radius: 10px;/*角の丸み*/
+  }
+  
+  
+  .piechart_left{
+    width: 50%;
+    margin-right: 20px;
+    border-radius: 10px;/*角の丸み*/
+    background-color: white;
+  }
+  
+  .piechart_left p{
+    margin: 30px 0 0 20px;
+  }
+  
+  .piechart_left img{
+    width:100%;
+  }
+  
+  .piechart_right{
+    width: 50%;
+    border-radius: 10px;/*角の丸み*/
+    background-color: white;
+  }
+  
+  .piechart_right p{
+    margin: 30px 0 0 20px;
+  }
+  
+  .piechart_right img{
+    width:100%;
+  }
+  
+  /* フッターCSS */
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    margin-top: 40px;
+  }
+  
+  footer p{
+    margin: 0 20px 0 20px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .footer_btn{
+    color: #96B8D0;
+    font-weight: bold;
+  }
+  
+  .footer_btn:hover{
+    color: #1471BC;
+  }
+
+  
+  /* モーダルCSSここから */
+  .modalArea {
+    visibility: hidden; /* displayではなくvisibility */
+    opacity : 0;
+    position: fixed;
+    z-index: 10; /* サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    height: 70%;
+    padding: 50px 30px;
+    background-color: #fff;
+    border-radius: 30px;/*角の丸み*/
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .is-show { /* モーダル表示用クラス */
+    visibility: visible;
+    opacity : 1;
+  }
+  /* モーダルCSSここまで */
+  
+  
+  /* 以下ボタンスタイル */
+  button {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #282828;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  #openModal {
+    transform:translate(-50%,-50%);
+  }
+  
+  /* モーダル見た目 */
+  .modalContents{
+    display: flex;
+    
+  }
+  .modal_left{
+    width: 50%;
+    height: 90%;
+  }
+  
+  .modal_day{
+    width: 100%;
+    height: 80px;
+  }
+  
+  .modal_day input{
+    background-color: #F5F5F8;
+    border: none;
+    border-radius: 3px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .modal_contents{
+    width: 100%;
+    height: 30%
+  }
+  
+  .modal_lng{
+    width: 100%;
+    height: 50%
+  }
+  
+  .modal_right{
+    width: 50%;
+    height: 90%;
+  }
+  
+  .modal_hour input{
+    background-color: #F5F5F8;
+    border: none;
+    border-radius: 3px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .modal_twitter textarea{
+    background-color: #F5F5F8;
+    border: none;
+    border-radius: 3px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .modal_btn{
+    border: solid 0px #6091d3;/*線*/
+    border-radius: 30px;/*角の丸み*/
+    /* グラデーション */
+    font-weight: normal;background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
+    background-image: linear-gradient(90deg, #137DC4 40%, #38C7F9 100%);
+    font-size: 18px;
+     /* 縦横中央揃え */
+     text-align: center;
+     line-height: 50px;
+  }
