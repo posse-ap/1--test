@@ -1,0 +1,268 @@
+body {
+  background-color: #F5F5F8;
+  color: #333333;
+}
+h2 {
+  font-size: 1rem;
+}
+input, textarea{
+  border:none;
+  background:none;
+  width: 100%;
+}
+.navbar {
+  height: 64px;
+  padding: 0 40px;
+}
+.nav_logo {
+  height: 20px;
+}
+.logo_week {
+  margin: auto 0;
+  color: #97B9D1;
+}
+.nav_right_btn {
+  display: inline-block;
+  padding: 8px 40px;
+  margin: 12px 0;
+  border-radius: 25px;
+  text-decoration: none;
+  outline: none; 
+  background-image: linear-gradient(45deg, #0672BE 0%, #4FD7FF 100%);
+  transition: .4s;
+  font-size: 16px;
+  box-shadow: 0 0 20px #0672BE;
+  color: #fff;
+}
+.bargraph_img {
+  margin-top: 5px;
+  height: auto;
+  width: 90%;
+  margin: auto;
+}
+.today_card {
+  height: 120px;
+}
+.today_cards {
+  margin-bottom: 20px;
+}
+.circlegrap_card {
+  height: 500px;
+}
+.today_card_top {
+  padding-top: 15px;
+  margin-bottom: 8px;
+  color: #0F71BC;
+}
+.today_card_midle {
+  margin-bottom: 8px;
+  color: #111111;
+}
+.today_card_bottom {
+  color: #97B9D1;
+  font-size: 1rem;
+}
+.circle_graph {
+  height: auto;
+  width: 90%;
+}
+.img_cace {
+  text-align: center;
+}
+.circle{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #1754EF;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+.js_color {
+  background: #1754EF;
+}
+.css_color {
+  background: #0F71BD;
+}
+.php_color {
+  background-color: #20BDDE;
+}
+.html_color {
+  background-color: #3CCEFE;
+}
+.laravel_color {
+  background-color: #B29EF3;
+}
+.sql_color {
+  background-color: #6D46EC;
+}
+.shell_color {
+  background-color: #4A17EF;
+}
+.other_color {
+  background-color: #3105C0;
+}
+.dotinstall_color {
+  background-color: #1754EF;
+}
+.nyobi_color {
+  background-color: #0F71BD;
+}
+.posse_color {
+  background-color: #20BDDE;
+}
+.study_lang_name_ohter{
+  font-size: 15px;
+}
+.study_lang_name {
+  margin-bottom: 8px;
+}
+.study_lang_right_margin {
+  margin-right: 12px;
+}
+.original_rounded_lg {
+  border-radius: 15px;
+}
+.original_rounded_lg_modal {
+  border-radius: 20px;
+}
+.left_graph_inner {
+  height: 360px;
+}
+.allcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-left {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  border-left: 2px solid #0F71BC;
+  border-bottom: 2px solid #0F71BC;
+  transform: rotate(45deg);
+}
+.arrow-right {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  border-top: 2px solid #97B9D1;
+  border-right: 2px solid #97B9D1;
+  transform: rotate(45deg);
+}
+.modal_add_code {
+  height: 525px;
+}
+.modal-content {
+  width: 900px;
+  height: 550px;
+  border-radius: 30px;
+  right: 40%;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal_top_letf_text {
+  margin-bottom: 8px;
+}
+.study_day_input {
+  padding: 18px 0 18px 20px;
+  background-color: #F5F5F8;
+}
+.study_hour_input {
+  padding: 18px 0 18px 20px;
+  background-color: #F5F5F8;
+}
+.modal-header {
+  padding-bottom: 0;
+  padding-top: 3%;
+  padding-right: 3%;
+  height: 6%;
+}
+.bg_modal_base_color {
+  background-color: #F5F5F8;
+}
+.modal_twitter_comment_input {
+  height: 200px;
+}
+.nav_right_btn_modal {
+  width: 400px;
+  height: 50px;
+  font-size: 20px;
+}
+.circle_twitter {
+  width: 30px;
+  height: 30px;
+  background: #1754EF;
+  margin-right: 5px;
+  text-align:center;
+  line-height: 80px;
+}
+.checkmark002{
+	padding-left:24px;
+	position:relative;
+}
+
+.checkmark002:before,
+.checkmark002:after{
+	content:"";
+	display:block;
+	position:absolute;
+}
+.checkmark002:before{
+  width: 30px;
+  height: 30px;
+	border-radius:50%;
+	background:#0F70BD;
+	border:1px solid #ffffff;
+	left:0;top:-9px;
+}
+.checkmark002:after{
+	border-left:2px solid #ffffff;
+	border-bottom:2px solid #ffffff;
+	width:16px;
+	height:8px;
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	left:7px;
+	top:0px;
+}
+.check{
+	padding-left:24px;
+	position:relative;
+}
+
+.check:before,
+.check:after{
+	content:"";
+	display:block;
+	position:absolute;
+}
+.check:before{
+  width: 17px;
+  height: 17px;
+	border-radius:50%;
+  /* background:#1754EF; */
+  background:#CCCCCC;
+	border:1px solid #ffffff;
+  left:6px;
+  top:11px;
+}
+.check:after{
+	border-left:2px solid #ffffff;
+	border-bottom:2px solid #ffffff;
+	width:8px;
+	height:4px;
+	-webkit-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+	left:10px;
+	top:17px;
+}
+
+@media screen and (max-width: 750px){
+  .circle_graph {
+    height: 220px;
+    width: auto;
+  }
+}
