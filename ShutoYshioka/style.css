@@ -1,0 +1,396 @@
+
+/* ヘッダー */
+.headerInner{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    margin: 0 45px;
+}
+
+.headerInner_posse{
+    height: 64px;
+}
+
+.headerInner_left{
+    display: flex;
+}
+
+.headerInner_text{
+    line-height: 64px;
+    margin-left: 10px;
+    color: paleturquoise;
+}
+
+.headerInner_Toukou{
+    height: 64px;
+    margin-right: auto;
+}  
+
+/* main */
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height:100%; 
+    }
+
+main{
+    height:100%; 
+    min-height:100%;
+    background-color: aliceblue;
+    display: flex;
+}
+
+.blue_text{
+    color: #0099FF;
+    margin: 10px;
+}
+
+.number{
+    font-size: 40px;    
+}
+
+.lightblue_text{
+    color: #66CCFF;
+}
+
+
+.left{
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 30px;
+}
+
+.left_top{
+    display: flex;
+    height: 25%;
+    width: 100%;
+}
+
+.left_day{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 100px;
+    width: 150px; */
+    background-color: white;
+    text-align: center;
+    width: 33%;
+}
+
+.left_month{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 100px;
+    width: 150px; */
+    background-color: white;
+    text-align: center;
+    width: 33%;
+}
+
+.left_total{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 100px;
+    width: 150px; */
+    background-color: white;
+    text-align: center;
+    width: 33%;
+}
+
+.left_bottom{
+    border-radius: 10px;
+    margin: 0 10px;
+    /* height: 300px;
+    width: 490px; */
+    background-color: white;
+    height: 60%;
+}
+
+.left_bottom_glaph{
+ height: 85%;
+ margin: 10px 20px;
+ margin-top: 40px;
+}
+
+.right{
+    display: flex;
+    width: 50%;
+    margin: 0 30px 0 0;
+}
+
+.right_right{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 420px;
+    width: 240px; */
+    background-color: white;
+    width: 50%;
+    height: 83%;
+}
+
+.right_right_text{
+    font-size: 20px;  
+}
+.right_left_text{
+    font-size: 20px;  
+}
+
+.right_left{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 420px;
+    width: 240px; */
+    background-color: white; 
+    width: 50%;
+    height: 83%;
+}
+
+.right_left_content{
+    width: 92%;
+    margin: 10px 10px;
+}
+
+.right_left_text{
+    margin: 30px 20px;
+}
+
+.right_right_text{
+    margin: 30px 20px;
+}
+
+.modalContents{
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.modal_top{
+/* background-color: blue; */
+height: 26%;
+width: auto;
+margin: 0 56px;
+/* margin-top: 56px; */
+display: flex;
+}
+
+.modal_top_left{
+margin-right:20px;
+/* background-color: rgb(229, 255, 0); */
+width: 50%;
+}
+
+.modal_day_text{
+margin-top: 56px;
+}
+
+.modal_day_box{
+text-align: center;
+height: 56px;
+width: 100%;
+border-radius: 10px;
+background-color: #ececec;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal_day_box input{
+text-align: center;
+height: 56px;
+width: 100%;
+border-radius: 10px;
+background-color: #ececec;
+border:solid 0px;
+/* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+}
+
+.modal_top_right{
+margin-left:20px;
+width: 50%;
+/* background-color: cornflowerblue; */
+}
+
+.modal_button{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal_contents_text{
+    margin-top: 25px;
+}
+
+.modal_button button{
+
+    margin: 10px; 
+    /* height: 64px; */
+    border-radius: 30px;
+    width: 380px;
+    height: 60px;
+    /* background-color:blue ; */
+    /* background: linear-gradient(#F89174, #FFC778); */
+    background: -moz-linear-gradient(left, #00bfff 50%, #FFF);
+    background: -webkit-linear-gradient(left, #00bfff 50%, #FFF);
+    background: linear-gradient(to right, #00bfff 50%, #FFF);
+    /* border: 1px solid #282828;
+    border-radius: 2px; */
+    cursor: pointer; 
+} 
+/* ラジオボタン */
+label {
+background-color: #ececec;   /* 背景色 */
+    /* border: 1px solid #8080ff;  枠線 */
+    border-radius: 15px;         /* 枠線の角丸 */
+    padding: 2px 10px 2px 2px;   /* 内側の余白 */
+    margin-bottom: 8px;         /* 外下の余白 */
+    display: inline-block;      /* 途中で改行させない */
+    cursor: pointer;            /* マウスを手形に */
+ }
+
+
+
+.modal_time_text{
+    margin-top: 56px;
+    }
+    
+/* .modal_time_box{
+text-align: center;
+height: 56px;
+width: 100%;
+border-radius: 10px;
+background-color: rgb(128, 128, 128);
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+
+input.time_box{
+height: 56px;
+width: 99%;
+padding: 0;
+margin-bottom: 2px;
+border-radius: 10px;
+background-color: #ececec;
+margin-bottom: 1px;
+display: flex;
+justify-content: center;
+align-items: center;
+border:solid 0px;
+}
+
+
+.modal_middle{
+height: 58%;
+/* background-color: rgb(255, 0, 157);   */
+margin: 0 56px;
+display: flex;
+}
+
+.modal_middle_right{
+margin-right:20px;
+width: 50%;
+/* background-color: blueviolet; */
+}
+
+.modal_middle_left{
+    margin-left:20px;
+    width: 50%;
+    /* background-color: rgb(43, 128, 226); */
+    }
+
+.modal_bottom{
+/* background-color: rgb(0, 255, 64); */
+height: 10%;
+width: auto;
+margin: 0 56px;
+}
+
+textarea{
+background-color: #ececec;
+border-radius: 10px; 
+}
+
+/* .modal fade{
+    display: none;
+} */
+
+/* コピペ */
+
+
+/* * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
+  } */
+  
+  
+  /* モーダルCSS */
+  .modalArea {
+    display: none;
+    position: fixed;
+    z-index: 10; /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+
+  /* サイズとかカエルとき */
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    /* width: 70%; */
+    width: 900px;
+    height: 600px;
+    /* padding: 10px 30px; */
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    border-radius: 100%;
+    color: #999;
+    border: 1px solid #999;
+    width: 1.5em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  /* 以下ボタンスタイル */
+  .headerInner button {
+     margin: 10px; 
+    /* height: 64px; */
+    border-radius: 30px;
+    width: 160px;
+    /* background-color:blue ; */
+    /* background: linear-gradient(#F89174, #FFC778); */
+    background: -moz-linear-gradient(left, #00bfff 50%, #FFF);
+    background: -webkit-linear-gradient(left, #00bfff 50%, #FFF);
+    background: linear-gradient(to right, #00bfff 50%, #FFF);
+    /* border: 1px solid #282828;
+    border-radius: 2px; */
+    cursor: pointer;
+  }
+  
+  

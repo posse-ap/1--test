@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習時間表</title>
+    <link rel="stylesheet" href="style.css">	
+</head>
+<body>
+    <header>
+        <div class="headerInner">
+            <div class="headerInner_left">
+                <img class="headerInner_posse" src="img/posse.png">
+                <div class="headerInner_text">
+                  <div>4th week </div>   
+                </div>
+            </div>  
+                <button id="openModal">記録・投稿</button>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <div class="left_top">
+                <div class="left_day">
+                    <div class="blue_text">
+                       Today
+                    </div>
+                    <span class="number">
+                       3
+                    </span>
+                    <div class="lightblue_text">
+                      hour 
+                    </div>
+                </div>
+            <div class="left_month">
+                <div class="blue_text">
+                    Month
+                </div>
+                <span class="number">
+                    120
+                </span>
+                <div class="lightblue_text">
+                    hour
+                </div>
+                
+            </div>
+                <div class="left_total">
+                    <div class="blue_text">
+                       <div>Total</div> 
+                    </div>
+                    <span class="number">
+                       <div>1348</div> 
+                    </span>
+                    <div class="lightblue_text">
+                       <div>hour</div> 
+                    </div>
+                </div>
+            </div>
+            <div class="left_bottom">
+                <img class="left_bottom_glaph" src="img/glaph.png">
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_left">
+                <div class="right_left_text">
+                   <h2>学習言語</h2> 
+                </div>
+                <img class="right_left_content" src="img/content.png">
+                </div>
+                
+            <div class="right_right">
+                <div class="right_right_text">
+                   <h2>学習コンテンツ</h2> 
+                </div>
+                    <img class="right_left_content" src="img/time.png">
+                </div>
+            </div>
+        </div>
+
+         <!-- モーダルエリアここから -->
+         <section id="modalArea" class="modalArea">
+            <div id="modalBg" class="modalBg">
+            </div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <div class="modal_top">
+                        <div class="modal_top_left">
+                            <div class="modal_day_text">
+                                学習日
+                            </div>
+                            <div class="modal_day_box">
+                                <input name="date" type="date" />
+                            </div>
+                        </div>
+                        <div class="modal_top_right">
+                            <div class="modal_time_text">
+                                学習時間
+                            </div>
+                            <div class="modal_time_box">
+                                <input type="text" size="12" class="time_box">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal_middle">
+                        <div class="modal_middle_right">
+                            <div class="modal_contents_text">
+                                学習コンテンツ(複数選択可)
+                            </div>
+                            <!-- チェックbox -->
+                            <div class="modal_contents_choices">
+                                <label><input type="radio" value="N予備校" id="target" onclick="radioDeselection(this, 1)">N予備校
+                                </label>
+                                <label><input type="radio" value="ドットインストール" id="2" onclick="radioDeselection(this, 2)">ドットインストール
+                                </label>
+                                <label><input type="radio" value="posse課題" id="3" onclick="radioDeselection(this, 3)">posse課題
+                                </label>
+                            <div class="modal_contents_text">
+                                学習学習言語(複数選択可)
+                            </div> 
+                                <label><input type="radio" value="HTML" id="4" onclick="radioDeselection(this, 4)">HTML
+                                </label>
+                                <label><input type="radio" value="CSS" id="5" onclick="radioDeselection(this, 5)">CSS
+                                </label>
+                                <label><input type="radio" value="JavaScript" id="6" onclick="radioDeselection(this, 6)">JavaScript
+                                </label>
+                                <label><input type="radio" value="PHP" id="7" onclick="radioDeselection(this, 7)">PHP
+                                </label>
+                                <label><input type="radio" value="Laravel" id="8" onclick="radioDeselection(this, 8)">Laravel
+                                </label>
+                                <label><input type="radio" value="SQL" id="9" onclick="radioDeselection(this, 9)">SQL
+                                </label>
+                                <label><input type="radio" value="SHELL" id="10" onclick="radioDeselection(this, 10)">SHELL
+                                </label>
+                                <label><input type="radio" value="情報基礎知識(その他)" id="11" onclick="radioDeselection(this, 11)">情報基礎知識(その他)
+                                </label>
+                                
+                            </div>
+                        </div>
+                        <div class="modal_middle_left">
+                            <form action="#" method="post">
+                                <p>twitter用コメント<br>
+                                <textarea name="comment" cols="50" rows="13"></textarea></p>
+                            </form>
+                            <div>twitterに自動投稿する</div> 
+                        </div>
+                    </div>
+                    <div class="modal_bottom">
+                        <div class="modal_button">
+                            <button id="send">記録・投稿</button>
+                        </div> 
+                    </div>
+                    <div id="closeModal" class="closeModal">
+                        ×
+                    </div> 
+                </div>
+            </div>
+           </div>
+         </section>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="posse.js"></script>
+    </main>
+</body>
+</html>
