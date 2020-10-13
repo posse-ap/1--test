@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>possetop</title>
+</head>
+
+<link rel="stylesheet" href="possetop.css">
+<!-- <link rel="stylesheet" media="(max-width: 640px)" href="possetop_sp.css"> -->
+
+<div class="all">
+
+
+  <header>
+    <div class="header_left">
+      <img class="header_logo" src="posseLogotouka.png" alt="posseLogo">
+      <p>4th week</p>
+    </div>
+    <div class="header_right">
+      <a href="" class="header_btn" id="openModal">記録・投稿</a>
+    </div>
+  </header>
+
+  <body>
+    <div class="contents">
+        <div class="contents_left">
+          <div class="time">
+              <div class="today">
+                  <p class="time_title">Today</p>
+                  <p class="time_number">3</p>
+                  <p class="time_hour">hour</p>
+              </div>
+              <div class="month">
+                  <p class="time_title">Month</p>
+                  <p class="time_number">120</p>
+                  <p class="time_hour">hour</p>
+              </div>
+              <div class="total">
+                  <p class="time_title">Total</p>
+                  <p class="time_number">1348</p>
+                  <p class="time_hour">hour</p>
+              </div>
+          </div>
+
+          <div class="bargraph">
+            <img src="bargraph.png" alt="bargraph">
+          </div>
+      </div>
+      
+        <div class="contents_right">
+          <div class="piechart_left">
+            <div class="piechart_title"><p>学習言語</p></div>
+            <img src="piechart_left.png" alt="piechart_left">
+              <div class="study_lng_clm">
+                <div class ="study_item"><p class="circle" id="color1754EF"></p><span>JavaScript</span></div>
+                <div class ="study_item"><p class="circle" id="color1071BD"></p><span>CSS</span></div>
+                <div class ="study_item"><p class="circle" id="color20BEDE"></p><span>PHP</span></div>
+              </div>
+              <div class="study_lng_clm">
+                <div class ="study_item"><p class="circle" id="color3CCEFE"></p><span>HTML</span></div>
+                <div class ="study_item"><p class="circle" id="colorB29EF3"></p> <span>Laravel</span></div>
+                <div class ="study_item"><p class="circle" id="color6D46EC"></p><span>SQL</span></div>
+              </div>
+              <div class="study_lng_clm">
+                <div class ="study_item"><p class="circle" id="color4A18EF"></p><span>SHELL</span></div>
+              </div>
+              <div class="study_lng_clm">
+                <div class ="study_item"><p class="circle" id="color3105C0"></p><span>情報システム基礎知識（その他</span></div>
+              </div>    
+          </div>
+          <div class="piechart_right">
+            <div class="piechart_title"><p>学習コンテンツ</p></div>
+            <img src="piechart_right.png" alt="piechart_right">
+           <div class="study_lng_clm"> <div class ="study_item"><p class="circle" id="ccolor1754EF"></p><span>ドットインストール</span></div></div>
+            <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor1071BD"></p><span>N予備校</span></div></div>
+            <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor20BEDE"></p><span>POSSE課題</span></div></div>
+          </div>        
+        </div>
+    </div>
+    
+    <!-- モーダルエリアここから -->
+    <section id="modalArea" class="modalArea">
+      <div id="modalBg" class="modalBg"></div>
+      <div class="modalWrapper">
+        <div class="modalContents">
+            <div class="modal_left">
+                  <div class="modal_day">
+                    <p>学習日</p>
+                    <input type="text"　class="modal_day_input">
+                  </div>
+                  <div class="modal_contents">
+                    <p>学習コンテンツ（複数選択可）</p>
+                      <div class="modal_contents_checkbox">
+                        <input id="toggle1_1" type="checkbox" checked>
+                        <label for="toggle1_1">N予備校</label>
+
+                        <input id="toggle1_2" type="checkbox">
+                        <label for="toggle1_2">ドットインストール</label>
+
+                        <input id="toggle1_3" type="checkbox">
+                        <label for="toggle1_3">POSSE課題</label>
+                      </div>
+                    </div>
+                    <div class="modal_lng">
+                      <p>学習言語（複数選択可）</p>
+                      <div class="modal_lng_checkbox">
+                        <input id="toggle2_1" type="checkbox" checked>
+                        <label for="toggle2_1">HTML</label>
+
+                        <input id="toggle2_2" type="checkbox">
+                        <label for="toggle2_2">CSS</label>
+
+                        <input id="toggle2_3" type="checkbox">
+                        <label for="toggle2_3">JavaScript</label>
+
+                        <input id="toggle2_4" type="checkbox">
+                        <label for="toggle2_4">PHP</label>
+
+                        <input id="toggle2_5" type="checkbox">
+                        <label for="toggle2_5">Laravel</label>
+
+                        <input id="toggle2_6" type="checkbox">
+                        <label for="toggle2_6">SQL</label>
+
+                        <input id="toggle2_7" type="checkbox">
+                        <label for="toggle2_7">SHELL</label>
+
+                        <input id="toggle2_8" type="checkbox">
+                        <label for="toggle2_8">情報システム基礎知識</label>
+                      </div>
+                    </div>
+            </div>
+
+            <div class="modal_right">
+                  <div class="modal_hour">
+                    <p>学習時間</p>
+                    <input type="text"　class="modal_hour_input">
+                  </div>
+                  <div class="modal_twitter">
+                    <p>Twitter用コメント</p>
+                    <textarea class="modal_twitter_textarea"></textarea>
+                  </div>
+            </div>
+        </div>
+        <div class="modal_btn">
+          <a href="" class="modal_btn">記録・投稿</a>
+        </div>
+        <div id="closeModal" class="closeModal">
+          ×
+        </div>
+      </div>
+    </section>
+    <!-- モーダルエリアここまで -->
+  
+  <!-- ↓body閉じタグ直前でjsを読み込む -->
+  <script src="posse_record.js"></script>
+
+  </body>
+
+  <footer>
+    <span class="footer_btn">&lt;&#160;</span><p>2020年 10月</p><span class="footer_btn">&#160;&gt;</span>
+  </footer>
+</div> 
+</html>
