@@ -1,0 +1,139 @@
+
+
+ 
+ div {
+  border: solid;
+} 
+/* 　　　上　　　 */
+
+.header {
+  height: 64px;
+  display: flex;
+}
+
+.logo {
+  height: 64px;
+}
+
+.post {
+  margin-left: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page {
+  display: flex;
+  height: 500px;
+}
+
+.page > div {
+  width: 50%;
+}
+/* 　　　左　　　 */
+
+.time_graph {
+  height: 100%;
+  margin-right: 10px;
+}
+
+.study_time {
+  display: flex;
+  text-align: center;
+}
+
+/* 　　　学習時間　　　 */
+
+.today {
+  border: solid;
+  width: 100%;
+}
+.month {
+  border: solid;
+  width: 100%;
+}
+.total {
+  border: solid;
+  width: 100%;
+}
+
+/* 　　　学習時間グラフ　　 */
+
+.study_graph {
+  border: solid;
+  background: firebrick;
+  height: auto;
+  padding-bottom: auto;
+
+}
+
+/* 　　　右　　　 */
+
+.lang_cont {
+  display: flex;
+  margin-left: 10px;
+}
+
+/* 　　　学習言語　　　 */
+.lang {
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.lang_study{
+  height: auto;
+}
+.lang_graph {
+  height: auto;
+}
+.lang_type {
+ height: auto;
+}
+
+
+
+
+/* 　　　学習コンテンツ 　　*/
+.cont {
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* .cont_study
+.cont_graph
+.cont_type */
+
+/* 下 */
+.monthly {
+  text-align: center;
+}
+
+
+/* モーダル */
+.modal {
+  display: flex;
+}
+
+/* モーダル　左 */
+.modal_choice {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* モーダル　右 */
+.modal_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+/* 投稿・記録 */
+.modal_post {
+  text-align: center;
+}
+
+.modal_post_button {
+  cursor: pointer;
+}
