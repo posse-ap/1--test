@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学習表</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- 上 -->
+  <div class="header">
+    <img src="./img/posseLogotouka.png" alt="POSSE" class="logo">
+    <button class="post" id="button">記録・投稿</button>
+  </div>
+
+  <!-- 学習時間＆グラフ -->
+  <main class="page">
+    <!-- 左 -->
+    <div class="time_graph">
+      <!-- 時間（左上） -->
+      <div class="study_time">
+        <!-- 今日 -->
+        <div class="today">
+          Today
+          <p class="today_time"></p>
+          hour
+        </div>
+        <!-- 今月 -->
+        <div class="month">
+          Month
+          <p class="month_time"></p>
+          hour
+        </div>
+        <!-- トータル -->
+        <div class="total">
+          Total
+        <p class="total_time"></p>
+        hour
+        </div>
+      </div>
+      <!-- 棒グラフ（左下） -->
+      <div class="study_graph">
+        棒グラフ
+      </div>
+    </div>
+
+    <!-- 右 -->
+    <div class="lang_cont">
+      <!-- 学習言語　(右ページ　→　左) -->
+      <div class="lang">
+        <p class="lang_study">学習言語</p>
+        <div class="lang_graph">円グラフ</div>
+        <div class="lang_type">言語　種類</div>
+      </div>
+      <!-- 学習コンテンツ　（右ページ　→　右） -->
+      <div class="cont">
+        <p class="cont_study">学習コンテンツ</p>
+        <div class="cont_graph">円グラフ</div>
+        <div class="cont_type">コンテンツ　種類</div>
+      </div>
+    </div>
+  </main>
+
+  <div class="monthly">2020年10月</div>
+
+
+
+  <!-- モーダル -->
+  <div class="modal_back">
+  <main class="modal">
+
+      <!-- 左 -->
+      <div class="modal_choice">
+        学習日
+        <input type="date">
+        
+        学習コンテンツ（複数選択可）
+        <input type="checkbox" name="content" value="N_yobiko">N予備校
+        <input type="checkbox" name="content" value="dotinstall">ドットインストール
+        <input type="checkbox" name="content" value="POSSE_work">POSSE課題
+        
+        学習言語（複数選択可）
+        <input type="checkbox" name="language" value="HTML">HTML
+        <input type="checkbox" name="language" value="CSS">CSS
+        <input type="checkbox" name="language" value="JavaScript">JavaScript
+        <input type="checkbox" name="language" value="PHP">PHP
+        <input type="checkbox" name="language" value="Laravel">Laravel
+        <input type="checkbox" name="language" value="SQL">SQL
+        <input type="checkbox" name="language" value="SHELL">SHELL
+        <input type="checkbox" name="language" value="other">情報システム基礎知識（その他）
+      </div>
+      
+      <!-- 右 -->
+      <div class="modal_text">
+        学習時間
+        <input type="text">
+        
+        Twitter用コメント
+        <input type="text">
+        <input type="checkbox">Twitterに自動投稿する
+      </div>
+      
+    </main>
+    <div class="modal_post">
+      <button class="modal_post_button">記録・投稿</button>
+    </div>
+  </div>
+    
+    
+  <script src="./index.js"></script>
+</body>
+
+</html>
