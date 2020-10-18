@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>POSSE | 学習記録アプリ</title>
+  </head>
+  <body>
+    <header class="bg-primary">
+      <div class="d-flex justify-content-between w-100 px-3">
+        <div class="">
+          <a href=""><img class="posseLogo" src="img/posseLogo.png" alt=""></a>
+        </div>
+        <div class="d-none d-md-block">
+          <button class="registerBtn btn-outline-success" href="" data-toggle="modal" data-target="#PCstudyLog">記録・登録</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="card-group d-flex justify-content-between">
+            <div class="studyTime card col-4">
+              <div class="card-body">
+                <p class="card-title">Today</p>
+                <p>100時間</p>
+                <p>hour</p>
+              </div>
+            </div>
+      
+            <div class="studyTime card col-4">
+              <div class="card-body">
+                <p class="card-title">Month</p>
+                <p>100時間</p>
+                <p>hour</p>
+              </div>
+            </div>
+      
+            <div class="studyTime card col-4">
+              <div class="card-body">
+                <p class="card-title">Total</p>
+                <p>100時間</p>
+                <p>hour</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="studyTimeGraph card">
+            <div class="card-body">
+              <img class="w-100" src="img/studyedTime.png" alt="">
+            </div>
+          </div>
+        </div>
+  
+        <div class="card-group col-md-6 d-flex justify-content-center">
+          <div class="studyContentGraph card col-6">
+            <div class="card-body">
+              <p class="card-title">学習言語</p>
+              <div class="">
+                <img class="w-100" src="img/learnedLanguage.png" alt=""> 
+              </div>
+              <ul class="">
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>HTML</li>
+                <li>Laravel</li>
+                <li>SQL</li>
+                <li>SHELL</li>
+                <li>情報システム基礎知識（その他）</li>
+              </ul>
+            </div>
+          </div>   
+          <div class="studyContentGraph card col-6">
+            <div class="card-body">
+              <p class="card-title">学習コンテンツ</p>
+              <div>
+                <img class="w-100" src="img/learnedContents.png" alt="">
+              </div>
+              <ul>
+                <li>ドットインストール</li>
+                <li>N予備校</li>
+                <li>POSSE課題</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-blcok d-md-none py-3">
+          <button class="registerBtn btn-outline-success btn_open" href="" data-toggle="modal" data-target="#SPstudyLog">記録・登録</button>
+        </div>
+
+      </div>
+
+      <!-- PCmodal -->
+      <div class="modal fade" id="PCstudyLog" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="container-fluid d-flex justify-content-center">
+
+                <div class="col-6">
+                  <div class="bg-secondary">
+                    <p class="mb-0">学習日</p>
+                    <input type="date" name="" id="">
+                  </div>
+                  <div class="bg-danger mt-1">
+                    <p class="mb-0">学習コンテンツ</p>
+                    <input type="checkbox">N予備校
+                    <input type="checkbox">ドットインストール
+                    <input type="checkbox">POSSE課題
+                  </div>
+                  <div class="bg-warning mt-1">
+                    <p class="mb-0">学習言語</p>
+                    <input type="checkbox">HTML
+                    <input type="checkbox">CSS
+                    <input type="checkbox">JavaScript
+                    <input type="checkbox">PHP
+                    <input type="checkbox">Laravel
+                    <input type="checkbox">SQL
+                    <input type="checkbox">SHELL
+                    <input type="checkbox">情報システム基礎知識(その他)
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="bg-info">
+                    <p class="mb-0">学習時間</p>
+                    <input type="">
+                  </div>
+                  <div class="bg-success mt-1">
+                    <p class="mb-0">Twitter用コメント</p>
+                    <div class="FlexTextarea">
+                      <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+                      <textarea id="FlexTextarea" class="FlexTextarea__textarea"></textarea>
+                    </div>
+                    <input type="checkbox" name="" id="">Twitterに自動投稿する
+                  </div>
+                </div>
+
+              </div>
+              <div class="text-center mt-3">
+                <button class="bg-primary">記録・投稿</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPmodal -->
+      <!-- <div class="modal fade" id="SPstudyLog" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"> -->
+      <div class="modal fade" id="slide" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div>
+                <div class="bg-secondary">
+                  <p class="mb-0">学習日</p>
+                  <input type="date" name="" id="">
+                </div>
+              </div>
+              <div>
+                <div class="bg-danger mt-1">
+                  <p class="mb-0">学習コンテンツ</p>
+                  <input type="checkbox">N予備校
+                  <input type="checkbox">ドットインストール
+                  <input type="checkbox">POSSE課題
+                </div>
+              </div>
+              <div>
+                <div class="bg-warning mt-1">
+                  <p class="mb-0">学習言語</p>
+                  <input type="checkbox">HTML
+                  <input type="checkbox">CSS
+                  <input type="checkbox">JavaScript
+                  <input type="checkbox">PHP
+                  <input type="checkbox">Laravel
+                  <input type="checkbox">SQL
+                  <input type="checkbox">SHELL
+                  <input type="checkbox">情報システム基礎知識(その他)
+                </div>
+              </div>
+
+              <div>
+                <div class="bg-info">
+                  <p class="mb-0">学習時間</p>
+                  <input type="">
+                </div>
+              </div>
+              <div>
+                <div class="bg-success mt-1">
+                  <p class="mb-0">Twitter用コメント</p>
+                  <div class="FlexTextarea">
+                    <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+                    <textarea id="FlexTextarea" class="FlexTextarea__textarea"></textarea>
+                  </div>
+                  <input type="checkbox" name="" id="">Twitterに自動投稿する
+                </div>
+              </div>
+
+              </div>
+              <div class="text-center mt-3">
+                <button class="bg-primary">記録・投稿</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+    </main>
+
+    <script src="index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
