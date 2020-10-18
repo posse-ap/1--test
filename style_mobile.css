@@ -1,0 +1,378 @@
+
+/* ヘッダー */
+.headerInner{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    margin: 0 45px;
+}
+
+.headerInner_posse{
+    height: 64px;
+}
+
+.headerInner_left{
+    display: flex;
+}
+
+.headerInner_text{
+    line-height: 64px;
+    margin-left: 10px;
+    color: #97b9d1;
+}
+
+.headerInner_Toukou{
+    height: 64px;
+    margin-right: auto;
+}  
+
+.headerInner button {
+    margin: 10px; 
+   border-radius: 30px;
+   width: 160px;
+   cursor: pointer;
+   background-image: linear-gradient(45deg, #0672BE 0%, #4FD7FF 100%);
+   font-size: 16px;
+   box-shadow: 0 0 20px #0672BE;
+   color: #fff;
+   border: none;
+ }
+
+/* main */
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height:100%; 
+    }
+
+.main{
+    height:100%; 
+    min-height:100%;
+    background-color: aliceblue;
+    /* display: flex; */
+}
+
+/* stydyTime */
+
+.studyTime{
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 30px;
+}
+
+.studyTime_box_title{
+    color: #0f71bc;
+    margin: 10px;
+}
+
+.number{
+    font-size: 40px;    
+}
+
+.studyTime_box_hour{
+    color: #97b9d1;
+}
+
+
+.studyTime_boxes{
+    display: flex;
+    height: 25%;
+    width: 100%;
+}
+
+.studyTime_box{
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* height: 100px;
+    width: 150px; */
+    background-color: white;
+    text-align: center;
+    width: 33%;
+}
+
+
+.studyTime_barGraph_Box{
+    border-radius: 10px;
+    margin: 0 10px;
+    background-color: white;
+    height: 60%;
+}
+
+.studyTime_barGraph{
+ width: 80%;
+ margin: 10px 20px;
+ margin-top: 40px;
+}
+
+/* pieChart */
+
+.pieChart{
+    display: flex;
+    width: 50%;
+    margin: 0 30px 0 0;
+}
+
+.pieChart_box{
+    border-radius: 10px;
+    margin: 20px 10px;
+    background-color: white;
+    width: 50%;
+    height: 83%;
+}
+
+.pieChart_box_title{
+    font-size: 15px;  
+    margin: 30px 20px;
+}
+
+ .pieChart_box_img{
+    width: 92%;
+    margin: 10px 10px;
+} 
+
+
+/* モーダル */
+
+.modalContents{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.modal_top{
+
+height: 26%;
+width: auto;
+margin: 0 56px;
+display: flex;
+}
+
+.modal_top_left{
+margin-right:20px;
+width: 50%;
+}
+
+.modal_day_text{
+margin-top: 56px;
+}
+
+.modal_day_box{
+text-align: center;
+height: 56px;
+width: 100%;
+border-radius: 10px;
+background-color: #ececec;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal_day_box input{
+text-align: center;
+height: 56px;
+width: 100%;
+border-radius: 10px;
+background-color: #ececec;
+border:solid 0px;
+}
+
+.modal_top_right{
+margin-left:20px;
+width: 50%;
+}
+
+.modal_button{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal_contents_text{
+    margin-top: 25px;
+}
+
+.modal_button button{
+    margin: 10px; 
+    border-radius: 30px;
+    height: 60px;
+    width: 160px;
+    background-image: linear-gradient(45deg, #0672BE 0%, #4FD7FF 100%);
+    font-size: 16px;
+    box-shadow: 0 0 20px #0672BE;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+} 
+/* テェックボタン */
+.modal_contents_choices label {
+background-color: #ececec;   /* 背景色 */
+    border-radius: 15px;         /* 枠線の角丸 */
+    padding: 2px 10px 2px 2px;   /* 内側の余白 */
+    margin-bottom: 8px;         /* 外下の余白 */
+    display: inline-block;      /* 途中で改行させない */
+    cursor: pointer;            /* マウスを手形に */
+ }
+
+ .modal_contents_choices input[type="checkbox"]+label:before{
+    border-radius: 50%;
+}
+
+input[type="checkbox"] {
+
+display: none;
+
+/*デフォルトのチェックボックスを非表示にする*/
+
+}
+
+input[type="checkbox"]:checked + label {
+    background: #31A9EE;/* マウス選択時の背景色を指定する */
+    color: #ffffff; /* マウス選択時のフォント色を指定する */
+    }
+    
+
+.modal_time_text{
+    margin-top: 56px;
+    }
+    
+input.time_box{
+height: 56px;
+width: 99%;
+padding: 0;
+margin-bottom: 2px;
+border-radius: 10px;
+background-color: #ececec;
+margin-bottom: 1px;
+display: flex;
+justify-content: center;
+align-items: center;
+border:solid 0px;
+}
+
+
+.modal_middle{
+height: 58%;
+margin: 0 56px;
+display: flex;
+}
+
+.modal_middle_right{
+margin-right:20px;
+width: 50%;
+}
+
+.modal_middle_left{
+    margin-left:20px;
+    width: 50%;
+    }
+
+.modal_bottom{
+height: 10%;
+width: auto;
+margin: 0 56px;
+}
+
+textarea{
+background-color: #ececec;
+border-radius: 10px; 
+}
+
+  /* モーダルCSS */
+  .modalArea {
+    display: none;
+    position: fixed;
+    z-index: 10; /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+
+  /* サイズとかカエルとき */
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 900px;
+    height: 600px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    border-radius: 100%;
+    color: #999;
+    border: 1px solid #999;
+    width: 1.5em;
+    display: flex;
+    justify-content: center;
+  }
+  
+/* @media screen and (max-width: 940px){
+
+.main{
+    height:100%; 
+    min-height:100%;
+    width: 100%;
+    background-color: aliceblue;
+    display: block;
+}
+
+.studyTime{
+    width: 100%;
+    margin:0 30px;
+}
+
+.studyTime_barGraph{
+    width: 50%;
+}
+
+.studyTime_boxes{
+    display: flex;
+    height: 33.3333%;
+    width: 100%;
+}
+
+.pieChart{
+    display: flex;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.pieChart_box{
+    width: 100%;
+}
+
+.pieChart_box_img{
+    width: auto;
+    margin: 10px 10px;
+} 
+
+.pieChart_box{
+    border-radius: 10px;
+    margin:0;
+    background-color: white;
+    width: 50%;
+    height: 83%;
+}
+
+}
+   */
+
+  

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習時間表</title>
+<link rel="stylesheet"  href="style_pc.css">
+<!-- <link rel="stylesheet" media="(max-width: 900px)" href="style_mobile.css">  -->
+</head>
+
+<body>
+    <header>
+        <div class="headerInner">
+            <div class="headerInner_left">
+                <img class="headerInner_posse" src="img/posse.png">
+                <div class="headerInner_text">
+                  <div>4th week </div>   
+                </div>
+            </div>  
+            <!-- <button id="openModal">記録・投稿</button> -->
+            <button id="openModal">記録・投稿</button>
+        </div>
+    </header>
+
+    <main class="main"> 
+        <div class="container">
+            <!-- left->studyTime -->
+            <div class="studyTime">
+                <div class="studyTime_boxes">
+    
+                    <div class="studyTime_box">
+                        <div class="studyTime_box_title">
+                           Today
+                        </div>
+                        <span class="number">
+                           3
+                        </span>
+                        <div class="studyTime_box_hour">
+                          hour 
+                        </div>
+                    </div>
+                    <div class="studyTime_box">
+                        <div class="studyTime_box_title">
+                            Month
+                        </div>
+                        <span class="number">
+                            120
+                        </span>
+                        <div class="studyTime_box_hour">
+                            hour
+                        </div>
+                    </div>
+                    <div class="studyTime_box">
+                        <div class="studyTime_box_title">
+                           <div>Total</div> 
+                        </div>
+                        <span class="number">
+                           <div>1348</div> 
+                        </span>
+                        <div class="studyTime_box_hour">
+                           <div>hour</div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="studyTime_barGraph_Box">
+                    <img class="studyTime_barGraph" src="img/glaph.png">
+                </div>
+            </div>
+            <div class="pieChart">
+    
+                <div class="pieChart_box">
+                    <div class="pieChart_box_title">
+                       <h2>学習言語</h2> 
+                    </div>
+                    <img class="pieChart_box_img" src="img/content.png">
+                    </div>
+                    
+                <div class="pieChart_box">
+                    <div class="pieChart_box_title">
+                       <h2>学習コンテンツ</h2> 
+                    </div>
+                        <img class="pieChart_box_img" src="img/time.png">
+                    </div>
+                </div>
+            </div>
+    
+             <!-- モーダルエリアここから -->
+             <section id="modalArea" class="modalArea">
+                <div id="modalBg" class="modalBg">
+                </div>
+                <div class="modalWrapper">
+                    <div class="modalContents">
+
+                        <div class="modal_top">
+                            <div class="modal_top_left">
+
+                                <div class="modal_day_text">
+                                    学習日
+                                </div>
+
+                                <div class="modal_day_box">
+                                    <input name="date" type="date" />
+                                </div>
+
+                                <div class="modal_contents_text">
+                                    学習コンテンツ(複数選択可)
+                                </div>
+                                <!-- チェックbox -->
+                                <div class="modal_contents_choices">
+
+                                    <input id="modal_check1" value="1" type="checkbox"><label for="modal_check1">N予備校</label>
+                                    <input id="modal_check2" value="2" type="checkbox"><label for="modal_check2">ドットインストール</label>
+                                    <input id="modal_check3" value="3" type="checkbox"><label for="modal_check3">posse課題</label>
+                              
+                                <div class="modal_contents_text">
+                                    学習学習言語(複数選択可)
+                                </div>
+
+                                    <input id="modal_check4" value="4" type="checkbox"><label for="modal_check4">HTML</label>
+                                    <input id="modal_check5" value="5" type="checkbox"><label for="modal_check5">CSS</label>
+                                    <input id="modal_check6" value="6" type="checkbox"><label for="modal_check6">JavaScript</label>
+                                    <input id="modal_check7" value="7" type="checkbox"><label for="modal_check7">PHP</label>
+                                    <input id="modal_check8" value="8" type="checkbox"><label for="modal_check8">Laravel</label>
+                                    <input id="modal_check9" value="9" type="checkbox"><label for="modal_check9">SQL</label>
+                                    <input id="modal_check10" value="10" type="checkbox"><label for="modal_check10">SHELL</label>
+                                    <input id="modal_check11" value="11" type="checkbox"><label for="modal_check11">情報基礎知識(その他)</label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="modal_top_right">
+
+                                <div class="modal_time_text">
+                                    学習時間
+                                </div>
+
+                                <div class="modal_time_box">
+                                    <input type="text" size="12" class="time_box">
+                                </div>
+
+                                <div class="modal_top_right_tweetBox">
+                                    <form action="#" method="post">
+                                        <p>twitter用コメント<br>
+                                        <textarea id="txtbox" name="comment" class="tweetBox"></textarea></p>
+                                    </form>
+
+                                    <div>twitterに自動投稿する</div> 
+
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="modal_bottom">
+                            <div class="modal_button">
+                                <button id="send">記録・投稿</button>
+
+                                <script>
+                                    document.getElementById("send").addEventListener('click', function(event) {
+                                        event.preventDefault();
+                                        var left = Math.round(window.screen.width / 2 - 275);
+                                        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+                                        window.open(
+                                            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("txtbox").value),
+                                            null,
+                                            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+                                    });
+                                </script>
+
+                            </div> 
+                        </div>
+                        <div id="closeModal" class="closeModal">
+                            ×
+                        </div> 
+                    </div>
+                </div>
+               </div>
+             </section>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script src="posse.js"></script>
+        </div>
+        <div class="footer">
+            <div class="footer_text">
+                <　2020 10月 　>
+                <button id="openModal2">記録・投稿</button>
+            </div>
+        </div>
+    </main>
+   
+    
+</body>
+</html>
