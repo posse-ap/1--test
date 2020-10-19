@@ -1,0 +1,27 @@
+body {
+  width: 320px;
+}
+
+div {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+
+
+/* 上 */
+.header {
+  height: 64px;
+  display: flex;
+}
+
+.logo {
+  height: 64px;
+}
+
+.post {
+  margin-left: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
