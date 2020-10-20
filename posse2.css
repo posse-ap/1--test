@@ -1,0 +1,323 @@
+@media ( max-width: 400px) {
+    body { background-color: red;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+    }
+    header p {
+         font-size: 10px;
+         color: gray;
+         margin-top: 20px;
+         ;
+    }
+    .btn {
+        display: none;
+        background-color: lightseagreen;
+        margin-left: 75%;
+        width: 120px;
+        height: 25px;
+        margin-top: 20px;
+        color: lightyellow;
+        text-align: center;
+        font-size: 10px;
+        line-height: 25px;
+        border-radius: 12px;
+        text-decoration: none;
+    }
+    
+    header {
+        display: flex;
+        background-color: ivory;
+        
+    }
+    
+    header section {display: flex
+    }
+    
+    .boxes {display: flex;
+        
+        margin-left: 5%;
+        margin-top: 20px;;
+        border-radius: 5px;
+    }
+    .graf img {
+       border-radius: 5px;
+       width: 95%;
+       margin-left: 5%;
+       margin-top: 20px;
+       height: 150px;
+    
+    }
+    
+    .boxes > section {
+    width: 175px;
+    background-color: ivory;
+    height: 90px;
+    }
+    
+    .boxes > section > p {
+        margin: 0%;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .blue {
+        font-size: 12px;
+        color: mediumblue ;
+    }
+    .black {
+        font-weight: bold;
+    }
+    .centerbox {
+    margin: 0 15px;
+    }
+    
+    .right_box {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 3%;
+    }
+    .left_box{
+       
+        margin-right: 20px;
+        height: 80%;
+    }
+    .entire {
+        
+    
+    }
+    
+    .right_box > section {
+    background-color: ivory;
+    }
+    
+    .right1 {
+        margin-right: ;
+        width: 40%;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+    
+    .right2 {
+        width: 40%;
+        margin-right: 5%;
+        border-radius: 5px;
+    }
+    .right1 img {
+        width:70% ;
+        margin: 0 20px;
+    }
+    .line {
+        display: flex ;
+        font-size: 8px;
+        justify-content: space-between;
+        width: 70%;
+    }
+     
+    .line2 {
+        font-size: 8px;
+    }
+    .right2 img {
+        width:70% ;
+        margin: 0 20px;
+    }
+    .right1 h1 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .right2 h1 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .line3 {
+        font-size: 8px;
+    }
+    
+    li {
+        color: mediumblue;
+    
+    }
+    
+    li span {
+        color: black;
+    }
+    
+    .arrow1{
+        position: relative;
+        display: inline-block;
+        padding-right: ;
+      }
+      
+      .arrow1::before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 0px;
+        border-top: solid 2px #5bc0de;
+        border-right: solid 2px #5bc0de;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(225deg);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -4px;
+      }
+    
+      .arrow2{
+        position: relative;
+        display: inline-block;
+        padding-right:;
+      }
+      
+      .arrow2::before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border: 0px;
+        border-top: solid 2px #5bc0de;
+        border-right: solid 2px #5bc0de;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -4px;
+      } 
+    
+      .row p { display: inline-block;
+            font-size: 8px;
+            margin: 0 10px;
+      }
+      .row {
+          display: flex;
+         
+      }
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    
+    #modal_main {
+       
+        left: 4.5%;
+        top: 10%;  
+        width: 90%;
+        height: 97%;
+        margin: auto; 
+        justify-content: center;
+        padding: 0;
+        position: fixed;
+        background: #fff;
+        position: absolute;
+        z-index: 10;
+        
+    }
+    
+    .huge {
+        width: 80%;
+        background-color: darkgrey;
+    }
+    .modalr {
+        width: ;
+        margin-left: 2%;
+        margin-top: 0%;
+    }
+    .modalr p {
+     font-size: 15px;
+     
+     
+    }
+    .modalr input {
+        border-radius:5px ;
+        ;
+    }
+    
+    .checkbox {
+        background-color: darkgrey;
+        border-radius: 5px;
+        justify-content: space-between;
+        width: 80%;
+    }
+    
+    .modall {
+        width: ;
+        margin-left: 5%;
+    }
+    .modall p {
+        font-size: 15px;
+    }
+    .twitter {
+        margin-bottom: 0;
+        margin-top:0;
+        padding: 0 0;
+    }
+    
+    .comment {
+        background-color: darkgrey;
+        width:90% ;
+    }
+    
+    .btn2 {
+       background-color: deepskyblue;
+       width: 80%;
+       height: 40px;
+       border-radius: 8px;
+       line-height: 40px;
+       text-align: center;
+       margin: auto;
+       margin-top: 10px;
+       font-size: 10px;
+       color: floralwhite;
+    }
+    
+    #modal_content {
+       
+    }
+    .batsu{
+        font-size: 120%;
+        font-weight: bold;
+        border-radius: 20px;
+        background-color: gray;
+        width: 15px;
+        text-align: center;
+        margin-left: 90%;
+    
+    } 
+
+
+    
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+       
+    }
+    
+    .modal_wrapper {
+        display:;
+ }
+ .btn3 {
+    background-color: deepskyblue;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    color: floralwhite;
+ }
+
+}
