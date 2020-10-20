@@ -1,0 +1,6 @@
+[1010/222312.929:ERROR:settings.cc(430)] Settings version is not 5
+[1010/223313.110:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\starf\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\8f9884c2-f6db-406b-a985-1141a723f1b5: 指定されたパスが見つかりません。 (0x3)
+[1010/223313.110:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\starf\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\937df08a-6325-4c8d-b737-9816b06d0fa6: 指定されたパスが見つかりません。 (0x3)
+[1010/223313.131:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\starf\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\ea995cfc-21b7-423c-8efe-8e09a01c302c: 指定されたパスが見つかりません。 (0x3)
+[1010/223313.131:ERROR:directory_reader_win.cc(43)] FindFirstFile: 指定されたパスが見つかりません。 (0x3)
+[1018/070713.775:ERROR:directory_reader_win.cc(43)] FindFirstFile: 指定されたパスが見つかりません。 (0x3)
