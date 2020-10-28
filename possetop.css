@@ -136,9 +136,6 @@ header p{
   font-weight: normal;background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
   background-image: linear-gradient(90deg, #137DC4 40%, #38C7F9 100%);
   font-size: 16px;
-   /* 縦横中央揃え */
-   text-align: center;
-   line-height: 40px;
 }
 
 body{
@@ -148,13 +145,13 @@ body{
   display: flex;
   margin: 20px 5% 0 5%;
 }
-.contents_left{
+.time_mater {
   display: inline-block;
   width: 50%;
   margin-right: 10px;
 }
 
-.contents_right{
+.piechart {
   display: flex;
   width: 50%;
   margin-left: 10px;
@@ -235,9 +232,10 @@ body{
   background-color: white;
 }
 
-.piechart_left img{
-  width: 100%;
-  margin-bottom: 5px;
+rect{
+  width: 70%;
+  /* margin-bottom: 5px;  */
+  fill: none;
 }
 
 .piechart_right{
@@ -366,9 +364,9 @@ body {
   top: 50%;
   left: 50%;
   transform:translate(-50%,-50%);
-  width: 70%;
+  width: 900px;
   height: 70%;
-  padding: 50px 30px;
+  padding: 50px 56px;
   background-color: #fff;
   border-radius: 30px;/*角の丸み*/
 }
@@ -394,70 +392,176 @@ button {
   border: 1px solid #282828;
   border-radius: 2px;
   cursor: pointer;
+  box-shadow: 0 0 8px #3ccfff;
 }
 
 /* モーダル見た目 */
 .modalContents{
   display: flex;
-  
+  height: 90%;
 }
 .modal_left{
   width: 50%;
   height: 90%;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal_day{
   width: 100%;
-  height: 80px;
+}
+
+.modal_day p{
+  margin-bottom: 7px;
 }
 
 .modal_day input{
   background-color: #F5F5F8;
   border: none;
-  border-radius: 3px;
+  border-radius: 11px;
   width: 90%;
   height: 50px;
+  margin-bottom: 7px;
 }
 
 .modal_contents{
   width: 100%;
-  height: 30%
+  margin-bottom: 7px;
+}
+
+.modal_contents p{
+  margin-bottom: 7px;
 }
 
 .modal_lng{
   width: 100%;
-  height: 50%
+}
+
+/* ここからチェックボックスCSS */
+
+
+input[type="checkbox"] {
+  opacity:0;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+  margin: 1px;
+  padding: 8px 10px 8px 30px;
+  border-radius: 100px;
+  background-color: #F5F5F8;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s, box-shadow .2s;
+}
+
+.modal_check {
+  position: relative;
+}
+
+.modal_check::after,
+.modal_check:before {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+.modal_check::after {
+  top: .15em;
+  left: -1.2em;
+  width: 18px;
+  height: 18px;
+  background-color: #cccccc;
+  border-radius: 100%;
+}
+
+.modal_check::before {
+  z-index: 2;
+  display: block;
+  content: '';
+  position: absolute;
+  top: .5em;
+  left: -.91em;
+  width: 7px;
+  height: 3px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked ~ .modal_check::after{
+  top: .15em;
+  left: -1.2em;
+  width: 18px;
+  height: 18px;
+  background-color: #0f71bd;
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked ~ label{
+  background-color: #0095ff;
+}
+
+/* チェックボックスCSSここまで */
+
+
+
+.modal_lng p{
+  margin-bottom: 7px;
 }
 
 .modal_right{
   width: 50%;
   height: 90%;
+  padding-left: 20px;
+}
+.modal_hour p{
+  margin-bottom: 7px;
 }
 
 .modal_hour input{
   background-color: #F5F5F8;
   border: none;
-  border-radius: 3px;
+  border-radius: 11px;
   width: 90%;
   height: 50px;
+  margin-bottom: 7px;
 }
 
+.modal_twitter p{
+  margin-bottom: 7px;
+}
 .modal_twitter textarea{
   background-color: #F5F5F8;
   border: none;
-  border-radius: 3px;
+  border-radius: 11px;
   width: 90%;
-  height: 50px;
+  height: 197px;
 }
 
-.modal_btn{
+.modal_footer{
+  display: flex;
+  justify-content: center;
+}
+
+.modal_footer_btn{
+  width: 33%;
+  color: white;
+  text-decoration: none;
   border: solid 0px #6091d3;/*線*/
   border-radius: 30px;/*角の丸み*/
   /* グラデーション */
-  font-weight: normal;background-image: -webkit-linear-gradient(left, #ff3cac 40%, #562b7c 100%);
-  background-image: linear-gradient(90deg, #137DC4 40%, #38C7F9 100%);
+  background-image: linear-gradient(2deg, #137DC4 40%, #38C7F9 100%);
   font-size: 18px;
    /* 縦横中央揃え */
    text-align: center;
    line-height: 50px;
+   box-shadow: 0 0 8px #3ccfff;
 }
