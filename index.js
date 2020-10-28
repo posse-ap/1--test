@@ -2,24 +2,55 @@
 'use strict'
 
 google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawTimeChart);
 google.charts.setOnLoadCallback(drawLanguageChart);
 google.charts.setOnLoadCallback(drawMaterialChart);
 
 // 学習時間のグラフ
+function drawTimeChart() {
+  var studyTimeGraph = document.getElementById('studyTimeGraph');
+  var data;
+
+  data = new google.visualization.arrayToDataTable([
+    ['day', 'studyTime'],
+    ['1', 5],
+    ['2', 5],
+    ['3', 5],
+    ['4', 5],
+    ['5', 5]
+  ]);
+
+  var options = {
+    title: '学習時間',
+    legend: 'none'
+  }
+
+  var chart = new google.visualization.ColumnChart(studyTimeGraph);
+  chart.draw(data, options);
+}
+
+
+// 学習言語のグラフ
 function drawLanguageChart() {
 
   var languageGraph = document.getElementById('languageGraph');
   var data;
 
   data = new google.visualization.arrayToDataTable([
-    ['Language', 'Votes'],
+    ['Language', 'Potion'],
     ['Javascript', 42],
     ['CSS', 18],
-    ['HTML', 10]
+    ['PHP', 10],
+    ['HTML', 9],
+    ['Laravel', 9],
+    ['SQL', 6],
+    ['SHELL', 4],
+    ['情報システム基礎知識（その他）', 2]
   ]);
 
   var options = {
-    title: 'My Chart',
+    colors: ['#1754EF', '#0F71BD', '#20BDDE', '#3CCEFE', '#B29EF3', '#6D46EC', '#4A17EF', '#3105C0'],
+    legend: 'none'
   };
 
   var chart = new google.visualization.PieChart(languageGraph);
@@ -40,7 +71,8 @@ function drawMaterialChart() {
   ])
 
   var options = {
-    title: '学習コンテンツ',
+    colors: ['#1754EF', '#0F71BD', '#20BDDE'],
+    legend: 'none'
   }
 
   var chart = new google.visualization.PieChart(materialGraph);
