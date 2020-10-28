@@ -17,6 +17,9 @@
       <p class="logo_week">
         4th week
       </p>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,15 +66,16 @@
             </div>
             <div class="left_graph">
               <div>
-                  <div class="left_graph_inner bg-white original_rounded_lg allcenter">
-                    <img src="img/bar_graph.png" alt="棒グラフ" class="bargraph_img">
+                  <div class="left_graph_inner bg-white original_rounded_lg allcenter mb-3">
+                    <img src="img/bar_graph.png" alt="棒グラフ" class="bargraph_img bargraph_img_pc">
+                    <img src="img/bar_graph_sp.png" alt="棒グラフ" class="bargraph_img bargraph_img_sp">
                   </div>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-6 mb-3 pr-1">
                 <div class="today_card bg-white circlegrap_card text-left original_rounded_lg">
                   <h2 class="p-3 pt-4 font-weight-bold">言語学習</h2>
                   <div class="img_cace">
@@ -95,7 +99,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-6 mb-3 pl-1">
                 <div class="today_card bg-white circlegrap_card text-left original_rounded_lg">
                   <h2 class="p-3 pt-4 font-weight-bold">学習コンテンツ</h2>
                   <div class="img_cace">
@@ -120,9 +124,10 @@
     <div>
       <p class="text-center footer_day font-weight-bold"><span class="arrow-left"></span>2020年 10月<span class="arrow-right"></span></p>
     </div>
+    <button type="button" class="btn btn-lg nav_right_btn sp_button" data-toggle="modal" data-target="#exampleModal">記録・投稿</button>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal_position" role="document">
+      <div class="modal-dialog modal_position modal-dialog-fluid" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -130,9 +135,10 @@
             </button>
           </div>
           <div class="modal-body modal_position">
-            <div class="container w-80">
-              <div class="row w-100">
-                <div class="col-md-6">
+            <div class="container w-80 mr0 p_0">
+
+              <div class="row w-100 center">
+                <div class="col-md-6 p_0">
                   <div class="modal_top_letf">
                     <p class="modal_top_letf_text">学習日</p>
                     <div class="bg-light original_rounded_lg_modal">
@@ -140,29 +146,17 @@
                       <!-- <input class="study_day_input" type="date"> -->
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="modal_top_right">
-                    <span class="modal_top_letf_text">学習時間</span>
-                    <div class="bg-light original_rounded_lg_modal">
-                      <input class="study_hour_input original_rounded_lg" type="text">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row w-100">
-                <div class="col-md-6">
-                  <div class="mb-3">
+                  <div>
                     <span class="modal_top_letf_text">学習コンテンツ（学習コンテンツ）</span>
-                    <div class="study_contens_set">
+                    <div class="study_contens_set mt_5px">
                       <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">N予備校</p>
                       <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">ドットインストール</p><br>
                       <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">POSSE課題</p>
                     </div>
                   </div>
-                  <div>
+                  <div class="mt_15px mb_5px">
                     <span class="modal_top_letf_text">学習言語（複数選択可）</span>
-                    <div class="study_contens_set">
+                    <div class="study_contens_set mt_5px">
                       <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">HTML</p>
                       <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">CSS</p>
                       <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">JavaScript</p><br>
@@ -174,17 +168,23 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div>
+                <div class="col-md-6 mb-3 p_0">
+                  <div class="modal_top_right mt_15px mb_5px">
+                    <span class="modal_top_letf_text">学習時間</span>
+                    <div class="bg-light original_rounded_lg_modal mt_5px">
+                      <input class="study_hour_input original_rounded_lg" type="text">
+                    </div>
+                  </div>
+                  <div class="mt_15px mb_5px">
                     <span class="modal_top_letf_text">Twitter用コメント</span>
-                    <div class="study_contens_set">
+                    <div class="study_contens_set mt_5px">
                       <textarea class="original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color modal_twitter_comment_input" name="body" id="" cols="50" rows="50"></textarea>
                       <div class="twitter_post d-flex align-items-center">
                         <div class="twitter_post_btn d-inline-block">
                           <span class="checkmark002"></span>
                         </div>
                         <div class="twitter_past_text d-inline-block">
-                          <p class="d-inline-block original_rounded_lg_modal mb-1 p-2">Twitterに自動投稿する</p>
+                          <p class="d-inline-block original_rounded_lg_modal mb-1 p-2">Twitterにシェアする</p>
                         </div>
                       </div>
                     </div>
