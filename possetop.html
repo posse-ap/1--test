@@ -6,8 +6,9 @@
   <title>possetop</title>
 </head>
 
-<link rel="stylesheet" href="possetop.css">
-<!-- <link rel="stylesheet" media="(max-width: 640px)" href="possetop_sp.css"> -->
+<!-- <link rel="stylesheet" href="possetop.css"> -->
+<link rel="stylesheet" media="(max-width: 1500px)" href="possetop.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="possetop_sp.css">
 
 <div class="all">
 
@@ -18,13 +19,14 @@
       <p>4th week</p>
     </div>
     <div class="header_right">
-      <a href="" class="header_btn" id="openModal">記録・投稿</a>
+      <button class="header_btn" id="openModal">記録・投稿</button>
+      <!-- <a href="" class="header_btn" id="openModal">記録・投稿</a> -->
     </div>
   </header>
 
   <body>
     <div class="contents">
-        <div class="contents_left">
+        <div class="time_mater">
           <div class="time">
               <div class="today">
                   <p class="time_title">Today</p>
@@ -48,10 +50,13 @@
           </div>
       </div>
       
-        <div class="contents_right">
+        <div class="piechart">
           <div class="piechart_left">
             <div class="piechart_title"><p>学習言語</p></div>
-            <img src="piechart_left.png" alt="piechart_left">
+            
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <div id="donutchart1" style="width: 120%; height: 200px;"></div>
+            <!-- <img src="piechart_left.png" alt="piechart_left"> -->
               <div class="study_lng_clm">
                 <div class ="study_item"><p class="circle" id="color1754EF"></p><span>JavaScript</span></div>
                 <div class ="study_item"><p class="circle" id="color1071BD"></p><span>CSS</span></div>
@@ -71,7 +76,8 @@
           </div>
           <div class="piechart_right">
             <div class="piechart_title"><p>学習コンテンツ</p></div>
-            <img src="piechart_right.png" alt="piechart_right">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <div id="donutchart2" style="width: 120%; height: 200px;"></div>
            <div class="study_lng_clm"> <div class ="study_item"><p class="circle" id="ccolor1754EF"></p><span>ドットインストール</span></div></div>
             <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor1071BD"></p><span>N予備校</span></div></div>
             <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor20BEDE"></p><span>POSSE課題</span></div></div>
@@ -91,43 +97,29 @@
                   </div>
                   <div class="modal_contents">
                     <p>学習コンテンツ（複数選択可）</p>
-                      <div class="modal_contents_checkbox">
-                        <input id="toggle1_1" type="checkbox" checked>
-                        <label for="toggle1_1">N予備校</label>
+                        <div class="modal_contents_checkbox">
+                          <label><input type="checkbox"><span class="modal_check">N予備校</span></label>
+                          <label><input type="checkbox"><span class="modal_check">ドットインストール</span></label>
 
-                        <input id="toggle1_2" type="checkbox">
-                        <label for="toggle1_2">ドットインストール</label>
+                          <label><input type="checkbox"><span class="modal_check">POSSE課題</span></label>
+                        </div>
 
-                        <input id="toggle1_3" type="checkbox">
-                        <label for="toggle1_3">POSSE課題</label>
-                      </div>
                     </div>
+
                     <div class="modal_lng">
                       <p>学習言語（複数選択可）</p>
                       <div class="modal_lng_checkbox">
-                        <input id="toggle2_1" type="checkbox" checked>
-                        <label for="toggle2_1">HTML</label>
+                        
+                        <label><input type="checkbox"><span class="modal_check">HTML</span></label>
+                        <label><input type="checkbox"><span class="modal_check">CSS</span></label>
 
-                        <input id="toggle2_2" type="checkbox">
-                        <label for="toggle2_2">CSS</label>
+                        <label><input type="checkbox"><span class="modal_check">JavaScript</span></label>
+                        <label><input type="checkbox"><span class="modal_check">PHP</span></label>
+                        <label><input type="checkbox"><span class="modal_check">Laravel</span></label>
+                        <label><input type="checkbox"><span class="modal_check">SQL</span></label>
+                        <label><input type="checkbox"><span class="modal_check">SHELL</span></label>
+                        <label><input type="checkbox"><span class="modal_check">情報システム基礎知識</span></label>
 
-                        <input id="toggle2_3" type="checkbox">
-                        <label for="toggle2_3">JavaScript</label>
-
-                        <input id="toggle2_4" type="checkbox">
-                        <label for="toggle2_4">PHP</label>
-
-                        <input id="toggle2_5" type="checkbox">
-                        <label for="toggle2_5">Laravel</label>
-
-                        <input id="toggle2_6" type="checkbox">
-                        <label for="toggle2_6">SQL</label>
-
-                        <input id="toggle2_7" type="checkbox">
-                        <label for="toggle2_7">SHELL</label>
-
-                        <input id="toggle2_8" type="checkbox">
-                        <label for="toggle2_8">情報システム基礎知識</label>
                       </div>
                     </div>
             </div>
@@ -140,11 +132,14 @@
                   <div class="modal_twitter">
                     <p>Twitter用コメント</p>
                     <textarea class="modal_twitter_textarea"></textarea>
+                    <div class ="twitter">
+                      <input type="checkbox"><span class="modal_check"></span><p>Twitterにシェアする</p>
+                    </div>
                   </div>
             </div>
         </div>
-        <div class="modal_btn">
-          <a href="" class="modal_btn">記録・投稿</a>
+        <div class="modal_footer">
+          <a href="" class="modal_footer_btn">記録・投稿</a>
         </div>
         <div id="closeModal" class="closeModal">
           ×
