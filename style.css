@@ -1,3 +1,7 @@
+body {
+  background-color: #f5f4f9;
+}
+
 header {
   height: 64px;
   align-items: center;
@@ -11,14 +15,14 @@ header {
 }
 
 .registerBtn {
-  /* margin-right: 40px; */
-  /* margin-left: auto; */
+  border-radius: 70px;
+  background: -moz-linear-gradient(left, );
+  background: -webkit-linear-gradient(left, );
+  background: linear-gradient(to right, , #FFF);
 }
 
 .studyTime {
-  /* margin: 20px; */
-  /* height: 119px; */
-  width: 168px;
+  width: 25%;
   text-align: center;
 }
 
@@ -27,13 +31,13 @@ header {
   vertical-align: middle;
 }
 
-.studyTimeGraph {
+/* .studyTimeGraph {
   margin: 10px;
 }
 
 .studyContentGraph {
   margin: 10px;
-}
+} */
 
 /* .tweetArea {
   line-height: 1.3;

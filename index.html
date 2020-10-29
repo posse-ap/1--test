@@ -12,22 +12,22 @@
   </head>
   <body>
     <header class="bg-primary">
-      <div class="d-flex justify-content-between w-100 px-3">
+      <div class="d-flex justify-content-between px-3 w-100">
         <div class="">
           <a href=""><img class="posseLogo" src="img/posseLogo.png" alt=""></a>
         </div>
         <div class="d-none d-md-block">
-          <button class="registerBtn btn-outline-success" href="" data-toggle="modal" data-target="#PCstudyLog">記録・登録</button>
+          <button class="registerBtn px-5" href="" data-toggle="modal" data-target="#PCstudyLog">記録・登録</button>
         </div>
       </div>
     </header>
 
     <main class="">
-      <div class="row">
+      <div class="d-flex justify-content-center">
 
         <div class="col-md-6">
           <div class="card-group d-flex justify-content-between">
-            <div class="studyTime card col-4">
+            <div class="studyTime card w-25">
               <div class="card-body">
                 <p class="card-title">Today</p>
                 <p>100時間</p>
@@ -35,7 +35,7 @@
               </div>
             </div>
       
-            <div class="studyTime card col-4">
+            <div class="studyTime card w-25">
               <div class="card-body">
                 <p class="card-title">Month</p>
                 <p>100時間</p>
@@ -43,7 +43,7 @@
               </div>
             </div>
       
-            <div class="studyTime card col-4">
+            <div class="studyTime card w-25">
               <div class="card-body">
                 <p class="card-title">Total</p>
                 <p>100時間</p>
@@ -53,18 +53,20 @@
           </div>
 
           <div class="studyTimeGraph card">
-            <div class="card-body">
-              <img class="w-100" src="img/studyedTime.png" alt="">
+            <div id="studyTimeGraph" class="card-body">
+              
             </div>
           </div>
         </div>
-  
+
         <div class="card-group col-md-6 d-flex justify-content-center">
+
+<!-- 学習言語のグラフ -->
           <div class="studyContentGraph card col-6">
             <div class="card-body">
               <p class="card-title">学習言語</p>
-              <div class="">
-                <img class="w-100" src="img/learnedLanguage.png" alt=""> 
+              <div id="languageGraph">
+                
               </div>
               <ul class="">
                 <li>JavaScript</li>
@@ -78,11 +80,13 @@
               </ul>
             </div>
           </div>   
+
+<!-- 学習教材のグラフ -->
           <div class="studyContentGraph card col-6">
             <div class="card-body">
               <p class="card-title">学習コンテンツ</p>
-              <div>
-                <img class="w-100" src="img/learnedContents.png" alt="">
+              <div id="materialGraph">
+
               </div>
               <ul>
                 <li>ドットインストール</li>
@@ -231,6 +235,8 @@
  
     </main>
 
+    <!-- google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="index.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
