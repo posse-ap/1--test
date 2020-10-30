@@ -205,7 +205,7 @@
     
     
     #modal_main {
-       
+         
         left: 4.5%;
         top: 10%;  
         width: 90%;
@@ -305,7 +305,7 @@
     }
     
     .modal_wrapper {
-        display:;
+        display: none;
  }
  .btn3 {
     background-color: deepskyblue;
