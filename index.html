@@ -6,210 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>Webアプリ制作</title>
-  </head>
-  <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="#"><img class="nav_logo" src="img/logo_2.png" alt=""></a>
-      <p class="logo_week">
-        4th week
-      </p>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <span class="navbar-nav mr-auto ">
-
-        </span>
-        <form class="form-inline">
-          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-          <!-- <button type="button" class="btn btn-lg nav_right_btn">記録・投稿</button> -->
-          <!-- Extra large modal -->
-          <!-- <button type="button" class="btn btn-lg nav_right_btn" data-toggle="modal" data-target=".bd-example-modal-lg">記録・投稿</button> -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-lg nav_right_btn" data-toggle="modal" data-target="#exampleModal">記録・投稿</button>
-
-
-        </form>
-      </div>
+  <link rel="stylesheet" href="styles.css">
+  <title>Posse</title>
+</head>
+<body class="container-fluid">
+  <header class="row">
+        <div class="logo col-md-2">
+          <img src="logo_2.png" alt="" width="100" height="30">
+        </div>
+        <div class="week col-md-2">
+          <p>4th week</p>
+        </div>
+        <div class="space col-md-5"></div>
+        <div class="toukou col-md-3">
+          <button id="openModal">記録・投稿</button>
+<!-- モーダルエリアここから -->
+<section id="modalArea" class="modalArea">
+  <div id="modalBg" class="modalBg"></div>
+  <div class="modalWrapper">
+    <div class="modalContents">
+     <div class="row">
+       <div class="first col-md-6">
+        <div class="mdate">
+         <h1>学習日</h1>
+         <p>2020年10月27日</p>
+        </div>
+        <div class="mcontents">
+         <h1>学習コンテンツ（複数選択可）</h1>
+          <div class="row">
+            <p class="col-md-6">N予備校</p>
+            <p class="col-md-6">ドットインストール</p>
+            <p class="col-md-6">POSSE課題</p>
+          </div>
+        </div>
+        <div class="mgengo">
+          <h1>学習言語（複数選択可）</h1>
+          <div class="row">
+            <p class="col-md-4">HTML</p>
+            <p class="col-md-4">CSS</p>
+            <p class="col-md-4">JavaScript</p>
+          </div>
+          <div class="row">
+            <p class="col-md-3">PHP</p>
+            <p class="col-md-3">Laravel</p>
+            <p class="col-md-3">SQL</p>
+            <p class="col-md-3">SHELL</p>
+          </div>
+          <div class="row">
+            <p>情報システム基礎知識（その他）</p>
+          </div>
+        </div>
+       </div>
+       <div class="second col-md-6">
+        <div class="mtime">
+         <h1>学習時間</h1>
+        </div>
+        <div class="mtwitter">
+         <h1>Twitter用コメント</h1>
+        </div>
+       </div>
+     </div>
+    </div>
+    <div id="closeModal" class="closeModal">
+      x
+    </div>
+  </div>
+</section>
+<!-- モーダルエリアここまで -->
+        </div>
     </header>
-    <main class="main">
-      <div class="container my-4">
-        <div class="row text-center center">
-          <div class="col-md-6">
-            <div class="row md-6 today_cards">
-              <div class="col-4">
-                <div class="today_card bg-white original_rounded_lg">
-                  <p class="today_card_top">Today</p>
-                  <p class="today_card_midle h3 font-weight-bold">3<span class="today_card_bottom d-block pt-2">hour</span></p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="today_card bg-white original_rounded_lg">
-                  <p class="today_card_top">Month</p>
-                  <p class="today_card_midle h3 font-weight-bold">120<span class="today_card_bottom d-block pt-2">hour</span></p>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="today_card bg-white original_rounded_lg">
-                  <p class="today_card_top">Total</p>
-                  <p class="today_card_midle h3 font-weight-bold">348<span class="today_card_bottom d-block pt-2">hour</span></p>
-                </div>
+  <main class="row">
+      <div class="info1 col-md-6"> 
+          <div class="data row">
+            <div class="today col-md-4">
+              <div class="todaybox">
+                <h1>Today</h1>
+                <p>3</p>
+                <p>hour</p>
               </div>
             </div>
-            <div class="left_graph">
-              <div>
-                  <div class="left_graph_inner bg-white original_rounded_lg allcenter">
-                    <img src="img/bar_graph.png" alt="棒グラフ" class="bargraph_img">
-                  </div>
+            <div class="month col-md-4">
+              <div class="monthbox">
+                <h1>Month</h1>
+                <p>120</p>
+                <p>hour</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="today_card bg-white circlegrap_card text-left original_rounded_lg">
-                  <h2 class="p-3 pt-4 font-weight-bold">言語学習</h2>
-                  <div class="img_cace">
-                    <img src="./img/pie_chart_1.png" alt="" class="circle_graph">
-                  </div>
-                  <div class="study_lang container mt-5 d-flex flex-wrap">
-                    <span class="d-inline study_lang_name study_lang_right_margin"><span class="circle js_color"></span>JavaScript</span>
-                    <span class="d-inline study_lang_name study_lang_right_margin"><span class="circle css_color"></span>CSS</span>
-                    <span class="d-inline study_lang_name study_lang_right_margin"><span class="circle php_color"></span>PHP</span>
-                  </div>
-                  <div class="study_lang container pt-0 d-flex flex-wrap">
-                    <span class="d-inline study_lang_name study_lang_right_margin"><span class="circle html_color"></span>HTML</span>
-                    <span class="d-inline study_lang_name study_lang_right_margin"><span class="circle laravel_color"></span>Laravel</span>
-                    <span class="d-inline study_lang_name"><span class="circle sql_color"></span>SQL</span>
-                  </div>
-                  <div class="study_lang container pt-0 d-flex flex-wrap">
-                    <span class="d-inline study_lang_name"><span class="circle shell_color"></span>SHELL</span>
-                  </div>
-                  <div class="study_lang container pt-0 d-flex flex-wrap">
-                    <span class="d-inline study_lang_name study_lang_name_ohter"><span class="circle other_color"></span>情報システム基礎知識(その他)</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="today_card bg-white circlegrap_card text-left original_rounded_lg">
-                  <h2 class="p-3 pt-4 font-weight-bold">学習コンテンツ</h2>
-                  <div class="img_cace">
-                    <img src="./img/pie_chart_2.png" alt="" class="circle_graph">
-                  </div>
-                  <div class="study_lang container mt-5 d-flex">
-                    <p class="d-inline study_lang_name study_lang_right_margin flex-wrap"><span class="circle dotinstall_color"></span>ドットインストール</p>
-                  </div>
-                  <div class="study_lang container pt-0 d-flex">
-                    <p class="d-inline study_lang_name flex-wrap"><span class="circle nyobi_color"></span>N予備校</p>
-                  </div>
-                  <div class="study_lang container pt-0 d-flex">
-                    <p class="d-inline study_lang_name flex-wrap"><span class="circle posse_color"></span>POSSE課題</p>
-                  </div>
-                </div>
+            <div class="total col-md-4">
+              <div class="totalbox">
+                <h1>Total</h1>
+                <p>1348</p>
+                <p>hour</p>
               </div>
             </div>
-          </div>
+        </div>
+        <div class="graph row">
+          <img src="bar_graph.png" alt="" width="100%" height="100%">
         </div>
       </div>
-    </main>
-    <div>
-      <p class="text-center footer_day font-weight-bold"><span class="arrow-left"></span>2020年 10月<span class="arrow-right"></span></p>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal_position" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body modal_position">
-            <div class="container w-80">
-              <div class="row w-100">
-                <div class="col-md-6">
-                  <div class="modal_top_letf">
-                    <p class="modal_top_letf_text">学習日</p>
-                    <div class="bg-light original_rounded_lg_modal">
-                      <p class="study_day_input original_rounded_lg">2020年10月10日</p>
-                      <!-- <input class="study_day_input" type="date"> -->
-                    </div>
-                  </div>
+      <div class="info2 col-md-6">
+          <div class="row">
+            <div class="gengo col-md-6">
+                 <div class="name1">
+                  <h1>学習言語</h1>
                 </div>
-                <div class="col-md-6">
-                  <div class="modal_top_right">
-                    <span class="modal_top_letf_text">学習時間</span>
-                    <div class="bg-light original_rounded_lg_modal">
-                      <input class="study_hour_input original_rounded_lg" type="text">
-                    </div>
-                  </div>
+                <div class="circle1">
+                 <img src="pie_chart_1.png" alt="" width="100%" height="100%">
                 </div>
+                <div class="items1">
+                  <div class="row">
+                    <p>Javascript</p>
+                    <p>CSS</p>
+                    <p>PHP</p>
+                  </div> 
+                  <div class="row">
+                    <p>HTML</p>
+                    <p>Laravel</p>
+                    <p>SQL</p>
+                  </div>
+                  <div class="row">
+                    <p>SHELL</p>
+                  </div>
+                  <div class="row">
+                    <p>情報システム基礎知識（その他）</p>
+                  </div> 
+                </div>
+                </div>
+            <div class="contents col-md-6">
+              <div class="name2">
+                  <h1>学習コンテンツ</h1>
+                </div>
+                <div class="circle2">
+                  <img src="pie_chart_2.png" alt="" width="100%" height="100%">
+                </div>
+                <div class="items2">
+                    <p>ドットインストール</p>
+                    <p>N予備校</p>
+                    <p>POSSE課題</p>
+                </div> 
               </div>
-              <div class="row w-100">
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <span class="modal_top_letf_text">学習コンテンツ（学習コンテンツ）</span>
-                    <div class="study_contens_set">
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">N予備校</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">ドットインストール</p><br>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">POSSE課題</p>
-                    </div>
-                  </div>
-                  <div>
-                    <span class="modal_top_letf_text">学習言語（複数選択可）</span>
-                    <div class="study_contens_set">
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">HTML</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">CSS</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">JavaScript</p><br>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">PHP</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">Laravel</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color check pl-4">SQL</p>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">SHELL</p><br>
-                      <p class="d-inline-block original_rounded_lg_modal mb-1 p-2 bg_modal_base_color check pl-4">情報システム基礎知識（その他）</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div>
-                    <span class="modal_top_letf_text">Twitter用コメント</span>
-                    <div class="study_contens_set">
-                      <textarea class="original_rounded_lg_modal mb-1 mr-2 p-2 bg_modal_base_color modal_twitter_comment_input" name="body" id="" cols="50" rows="50"></textarea>
-                      <div class="twitter_post d-flex align-items-center">
-                        <div class="twitter_post_btn d-inline-block">
-                          <span class="checkmark002"></span>
-                        </div>
-                        <div class="twitter_past_text d-inline-block">
-                          <p class="d-inline-block original_rounded_lg_modal mb-1 p-2">Twitterに自動投稿する</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mx-auto mt-3"><button type="button" class="btn btn-lg nav_right_btn nav_right_btn_modal" data-toggle="modal" data-target="#exampleModal">記録・投稿</button></div>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-    </div>
-
+      </main>
+      <footer class="row">
+        <div class="col-md-4"></div>
+      <div class="date col-md-4">
+       <p>＜　2020年10月　＞</p>
+     </div>
+     <div class="col-md-4"></div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
