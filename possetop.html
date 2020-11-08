@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>possetop</title>
+  <link rel="stylesheet" media="(max-width: 1500px)" href="possetop.css">
+  <link rel="stylesheet" media="(max-width: 812px)" href="possetop_sp.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
-<!-- <link rel="stylesheet" href="possetop.css"> -->
-<link rel="stylesheet" media="(max-width: 1500px)" href="possetop.css">
-<link rel="stylesheet" media="(max-width: 640px)" href="possetop_sp.css">
-
 <div class="all">
-
-
+  
+  
   <header>
     <div class="header_left">
       <img class="header_logo" src="posseLogotouka.png" alt="posseLogo">
@@ -23,136 +26,146 @@
       <!-- <a href="" class="header_btn" id="openModal">記録・投稿</a> -->
     </div>
   </header>
-
+  
   <body>
+    <!-- loding -->
+    <div id="overlay">
+      <div class="cv-spinner">
+        <span class="spinner"></span>
+      </div>
+    </div>
     <div class="contents">
-        <div class="time_mater">
-          <div class="time">
-              <div class="today">
-                  <p class="time_title">Today</p>
-                  <p class="time_number">3</p>
-                  <p class="time_hour">hour</p>
-              </div>
-              <div class="month">
-                  <p class="time_title">Month</p>
-                  <p class="time_number">120</p>
-                  <p class="time_hour">hour</p>
-              </div>
-              <div class="total">
-                  <p class="time_title">Total</p>
-                  <p class="time_number">1348</p>
-                  <p class="time_hour">hour</p>
-              </div>
+      <div class="time_mater">
+        <div class="time">
+          <div class="today">
+            <p class="time_title">Today</p>
+            <p class="time_number">3</p>
+            <p class="time_hour">hour</p>
           </div>
-
-          <div class="bargraph">
-            <img src="bargraph.png" alt="bargraph">
+          <div class="month">
+            <p class="time_title">Month</p>
+            <p class="time_number">120</p>
+            <p class="time_hour">hour</p>
           </div>
+          <div class="total">
+            <p class="time_title">Total</p>
+            <p class="time_number">1348</p>
+            <p class="time_hour">hour</p>
+          </div>
+        </div>
+        <div class="bargraph">
+          <div id="bargraph1"></div>
+        </div>
       </div>
       
-        <div class="piechart">
-          <div class="piechart_left">
-            <div class="piechart_title"><p>学習言語</p></div>
-            
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <div id="donutchart1" style="width: 120%; height: 200px;"></div>
-            <!-- <img src="piechart_left.png" alt="piechart_left"> -->
-              <div class="study_lng_clm">
-                <div class ="study_item"><p class="circle" id="color1754EF"></p><span>JavaScript</span></div>
-                <div class ="study_item"><p class="circle" id="color1071BD"></p><span>CSS</span></div>
-                <div class ="study_item"><p class="circle" id="color20BEDE"></p><span>PHP</span></div>
-              </div>
-              <div class="study_lng_clm">
-                <div class ="study_item"><p class="circle" id="color3CCEFE"></p><span>HTML</span></div>
-                <div class ="study_item"><p class="circle" id="colorB29EF3"></p> <span>Laravel</span></div>
-                <div class ="study_item"><p class="circle" id="color6D46EC"></p><span>SQL</span></div>
-              </div>
-              <div class="study_lng_clm">
-                <div class ="study_item"><p class="circle" id="color4A18EF"></p><span>SHELL</span></div>
-              </div>
-              <div class="study_lng_clm">
-                <div class ="study_item"><p class="circle" id="color3105C0"></p><span>情報システム基礎知識（その他</span></div>
-              </div>    
+      <div class="piechart">
+        <div class="piechart_left">
+          <div class="piechart_title"><p>学習言語</p></div>
+          
+          
+          <div id="donutchart1" style="width: 120%; height: 200px;"></div>
+          <div class="study_lng_clm">
+            <div class ="study_item"><p class="circle" id="color1754EF"></p><span>JavaScript</span></div>
+            <div class ="study_item"><p class="circle" id="color1071BD"></p><span>CSS</span></div>
+            <div class ="study_item"><p class="circle" id="color20BEDE"></p><span>PHP</span></div>
           </div>
-          <div class="piechart_right">
-            <div class="piechart_title"><p>学習コンテンツ</p></div>
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-            <div id="donutchart2" style="width: 120%; height: 200px;"></div>
-           <div class="study_lng_clm"> <div class ="study_item"><p class="circle" id="ccolor1754EF"></p><span>ドットインストール</span></div></div>
-            <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor1071BD"></p><span>N予備校</span></div></div>
-            <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor20BEDE"></p><span>POSSE課題</span></div></div>
-          </div>        
+          <div class="study_lng_clm">
+            <div class ="study_item"><p class="circle" id="color3CCEFE"></p><span>HTML</span></div>
+            <div class ="study_item"><p class="circle" id="colorB29EF3"></p> <span>Laravel</span></div>
+            <div class ="study_item"><p class="circle" id="color6D46EC"></p><span>SQL</span></div>
+          </div>
+          <div class="study_lng_clm">
+            <div class ="study_item"><p class="circle" id="color4A18EF"></p><span>SHELL</span></div>
+          </div>
+          <div class="study_lng_clm">
+            <div class ="study_item"><p class="circle" id="color3105C0"></p><span>情報システム基礎知識（その他</span></div>
+          </div>    
         </div>
+        <div class="piechart_right">
+          <div class="piechart_title"><p>学習コンテンツ</p></div>
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <div id="donutchart2" style="width: 120%; height: 200px;"></div>
+          <div class="study_lng_clm"> <div class ="study_item"><p class="circle" id="ccolor1754EF"></p><span>ドットインストール</span></div></div>
+          <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor1071BD"></p><span>N予備校</span></div></div>
+          <div class="study_lng_clm"><div class ="study_item"><p class="circle" id="ccolor20BEDE"></p><span>POSSE課題</span></div></div>
+        </div>        
+      </div>
     </div>
     
     <!-- モーダルエリアここから -->
     <section id="modalArea" class="modalArea">
       <div id="modalBg" class="modalBg"></div>
-      <div class="modalWrapper">
+      <div class="modalWrapper">        
         <div class="modalContents">
-            <div class="modal_left">
-                  <div class="modal_day">
-                    <p>学習日</p>
-                    <input type="text"　class="modal_day_input">
-                  </div>
-                  <div class="modal_contents">
-                    <p>学習コンテンツ（複数選択可）</p>
-                        <div class="modal_contents_checkbox">
-                          <label><input type="checkbox"><span class="modal_check">N予備校</span></label>
-                          <label><input type="checkbox"><span class="modal_check">ドットインストール</span></label>
-
-                          <label><input type="checkbox"><span class="modal_check">POSSE課題</span></label>
-                        </div>
-
-                    </div>
-
-                    <div class="modal_lng">
-                      <p>学習言語（複数選択可）</p>
-                      <div class="modal_lng_checkbox">
-                        
-                        <label><input type="checkbox"><span class="modal_check">HTML</span></label>
-                        <label><input type="checkbox"><span class="modal_check">CSS</span></label>
-
-                        <label><input type="checkbox"><span class="modal_check">JavaScript</span></label>
-                        <label><input type="checkbox"><span class="modal_check">PHP</span></label>
-                        <label><input type="checkbox"><span class="modal_check">Laravel</span></label>
-                        <label><input type="checkbox"><span class="modal_check">SQL</span></label>
-                        <label><input type="checkbox"><span class="modal_check">SHELL</span></label>
-                        <label><input type="checkbox"><span class="modal_check">情報システム基礎知識</span></label>
-
-                      </div>
-                    </div>
+          <div class="modal_left">
+            <div class="modal_day">
+              <p>学習日</p>
+              <input type="text" class="modal_day_input">
+              
             </div>
-
-            <div class="modal_right">
-                  <div class="modal_hour">
-                    <p>学習時間</p>
-                    <input type="text"　class="modal_hour_input">
-                  </div>
-                  <div class="modal_twitter">
-                    <p>Twitter用コメント</p>
-                    <textarea class="modal_twitter_textarea"></textarea>
-                    <div class ="twitter">
-                      <input type="checkbox"><span class="modal_check"></span><p>Twitterにシェアする</p>
-                    </div>
-                  </div>
+            <div class="modal_contents">
+              <p>学習コンテンツ（複数選択可）</p>
+              <div class="modal_contents_checkbox">
+                <label class="check_label"><input type="checkbox"><span class="modal_check">N予備校</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">ドットインストール</span></label>
+                
+                <label class="check_label"><input type="checkbox"><span class="modal_check">POSSE課題</span></label>
+              </div>
+              
             </div>
+            
+            <div class="modal_lng">
+              <p>学習言語（複数選択可）</p>
+              <div class="modal_lng_checkbox">
+                
+                <label class="check_label"><input type="checkbox"><span class="modal_check">HTML</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">CSS</span></label>
+                
+                <label class="check_label"><input type="checkbox"><span class="modal_check">JavaScript</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">PHP</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">Laravel</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">SQL</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">SHELL</span></label>
+                <label class="check_label"><input type="checkbox"><span class="modal_check">情報システム基礎知識</span></label>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal_right">
+            <div class="modal_hour">
+              <p>学習時間</p>
+              <input type="text"　class="modal_hour_input">
+            </div>
+            <div class="modal_twitter">
+              <p>Twitter用コメント</p>
+              <textarea id="txtbox" class="modal_twitter_textarea"
+              name="tweet_box"
+              onkeyup="GetTweet(value)"
+              cols="40"
+              rows="8"></textarea>
+            </div>
+            
+            <div class ="twitter">
+              <label class="twitter_label"><input type="checkbox" id ="c9"><span class="twitter_check"></span><p>Twitterにシェアする</p></label>
+            </div>
+            
+          </div>
         </div>
         <div class="modal_footer">
-          <a href="" class="modal_footer_btn">記録・投稿</a>
+          <button class="modal_footer_btn" id="tweet" onclick="clickBtn9()" >記録・投稿</button>
         </div>
         <div id="closeModal" class="closeModal">
           ×
         </div>
       </div>
+      
     </section>
     <!-- モーダルエリアここまで -->
-  
-  <!-- ↓body閉じタグ直前でjsを読み込む -->
-  <script src="posse_record.js"></script>
-
+    
+    <script src="posse_record.js"></script>
   </body>
-
+  
   <footer>
     <span class="footer_btn">&lt;&#160;</span><p>2020年 10月</p><span class="footer_btn">&#160;&gt;</span>
   </footer>
