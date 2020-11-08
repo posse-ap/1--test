@@ -211,32 +211,30 @@ body{
 }
 
 .bargraph {
-  text-align: center;
-  display: inline-block;
-  height: fit-content;
-}
-
-.bargraph img{
+  height: 80%;
   width: 100%;
-  border-radius: 10px;/*角の丸み*/
-}
+  background-color: white;
+} 
 
 /* ここから円グラフCSS */
 .piechart_title{
   margin: 30px 0 20px 20px;
 }
 .piechart_left{
+  height: 100%;
   width: 50%;
   margin-right: 20px;
   border-radius: 10px;/*角の丸み*/
   background-color: white;
 }
 
-rect{
-  width: 70%;
-  /* margin-bottom: 5px;  */
-  fill: none;
+#donutchart1 {
+ height: 50%;
 }
+
+#donutchart2 {
+  height: 50%;
+ }
 
 .piechart_right{
   width: 50%;
@@ -371,6 +369,8 @@ body {
   border-radius: 30px;/*角の丸み*/
 }
 
+
+
 .closeModal {
   position: absolute;
   top: 0.5rem;
@@ -445,10 +445,14 @@ input[type="checkbox"] {
   opacity:0;
   -webkit-appearance: none;
   appearance: none;
-  position: absolute;
 }
 
-label {
+.check_label {
+  display: inline-block;
+  position: relative;
+}
+
+.modal_check {
   display: inline-block;
   position: relative;
   margin: 1px;
@@ -458,12 +462,8 @@ label {
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
-  transition: background-color .2s, box-shadow .2s;
 }
 
-.modal_check {
-  position: relative;
-}
 
 .modal_check::after,
 .modal_check:before {
@@ -473,8 +473,8 @@ label {
 }
 
 .modal_check::after {
-  top: .15em;
-  left: -1.2em;
+  top: 0.45em;
+  left: 0.5em;
   width: 18px;
   height: 18px;
   background-color: #cccccc;
@@ -486,8 +486,8 @@ label {
   display: block;
   content: '';
   position: absolute;
-  top: .5em;
-  left: -.91em;
+  top: 0.8em;
+  left: 0.8em;
   width: 7px;
   height: 3px;
   border-left: 2px solid #fff;
@@ -497,21 +497,17 @@ label {
 }
 
 input[type="checkbox"]:checked ~ .modal_check::after{
-  top: .15em;
-  left: -1.2em;
   width: 18px;
   height: 18px;
   background-color: #0f71bd;
   border-radius: 100%;
 }
 
-input[type="checkbox"]:checked ~ label{
-  background-color: #0095ff;
+input[type="checkbox"]:checked ~ .modal_check{
+  background-color: #E7F5FE;
 }
 
 /* チェックボックスCSSここまで */
-
-
 
 .modal_lng p{
   margin-bottom: 7px;
@@ -546,6 +542,63 @@ input[type="checkbox"]:checked ~ label{
   height: 197px;
 }
 
+.twitter_label{
+  display: flex;
+  align-items: center;
+}
+
+.twitter p{
+  display: inline-block;
+  padding: 0 0 0 5px;
+  font-size: 1px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.twitter_check {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.twitter_check::after,
+.twitter_check:before {
+  display: block;
+  content: '';
+}
+
+.twitter_check::after {
+  top: 0.45em;
+  left: 0.5em;
+  width: 26px;
+  height: 26px;
+  background-color: #cccccc;
+  border-radius: 100%;
+}
+
+.twitter_check::before {
+  z-index: 2;
+  position: absolute;
+  top: 0.4em;
+  left: 0.35em;
+  width: 13px;
+  height: 7px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked + .twitter_check::after{
+  width: 26px;
+  height: 26px;
+  background-color: #0f71bd;
+  border-radius: 100%;
+}
+
 .modal_footer{
   display: flex;
   justify-content: center;
@@ -565,3 +618,39 @@ input[type="checkbox"]:checked ~ label{
    line-height: 50px;
    box-shadow: 0 0 8px #3ccfff;
 }
+
+/********************************************
+* Now Loading
+********************************************/
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height:100%;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 4px #ddd solid;
+  border-top: 4px #999 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.is-hide{
+  display:none;
+}
+
