@@ -5,12 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="top.css">
   <title>posse_1</title>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript"> </script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
   <header>
     <img src="img/logo_2.png" alt="">
     <p>4th week</p>
-    <a id="kiroku_1" href="file:///Users/moriharuka/Downloads/quizy/%E8%87%AA%E4%B8%BB%E5%88%B6%E4%BD%9Cweb%E3%82%A2%E3%83%97%E3%83%AA/index.html">記録・登録</a>
+    <div class="content">
+      <a class="js-modal-open" href="">記録・投稿</a>
+    </div>
+    <div class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+        
+        <a class="js-modal-close" href="">×</a>
+        <div class="daytime">
+           <div class="left">
+            
+             <div id="smallday">
+               <p>学習日</p>
+               <input class "original_rounded_lg" type="date">
+             </div>
+             <div id="smallcontents">
+              <p>学習コンテンツ（複数選択可）</p>
+                 <div id="cont1">
+                   <div id="n-yobi"><input type="checkbox">N予備校</div>
+                   <div id="dot"><input type="checkbox">ドットインストール</div>
+                 </div>
+                 <div id="cont2">
+                   <div id="kadai"><input type="checkbox">POSSE課題</div>
+                 </div>
+             </div>
+         
+     
+             <div id="smalllanguage">
+               <p>学習言語（複数選択可）</p>
+                <div id="lang1">
+                 <div id="html"><input type="checkbox">HTML</div>
+                 <div id="css"><input type="checkbox">CSS</div>
+                 <div id="java"><input type="checkbox">JavaScript</div>
+                </div>
+     
+                <div id="lang2">
+                 <div id="php"><input type="checkbox">PHP</div>
+                 <div id="lara"><input type="checkbox">Laravel</div>
+                 <div id="sql"><input type="checkbox">SQL</div>
+                 <div id="shell"><input type="checkbox">SHELL</div>
+                 
+                </div>
+     
+                <div id="lang3">
+                 <div id="system"><input type="checkbox">情報システム基礎知識（その他）</div>
+                </div>
+     
+             </div>
+           </div>
+     
+           <div class="right">
+             <div id="smalltime">
+               <p> 学習時間</p>
+               <input type="text" class="timeplace">
+             </div>
+             <div id="smallcomment">
+              <p>Twitter用コメント</p>
+              <input type="text" class="commentplace">
+             </div>
+             <div id="twitter">
+               <div id="check"><input type="checkbox"></div>
+               <div id="box">Twitterにシェアする</div>
+             </div>
+           </div>
+          </div> 
+          
+          <button onclick="location.href='./load.html'">記録・投稿</button>
+        
+      
+
+  <script>
+    $(function(){
+  $('.js-modal-open').on('click',function(){
+      $('.js-modal').fadeIn();
+      return false;
+  });
+  $('.js-modal-close').on('click',function(){
+      $('.js-modal').fadeOut();
+      return false;
+  });
+});
+
+  </script>
   </header>
 
   <div class="container">
@@ -34,16 +123,18 @@
             <h6>hour</h6>
           </div>
         </div>
-        <div class="graph">
-          <img class="graphimg" src="img/bo_graph.png" alt="">
+        <div class="graphimg">
+        <div id="graphchart1">
         </div>
       </div>
-      <div class="side">
-        <div class="twobox">
-          <div id="language">
-            <h2>学習言語</h2>
-            <img class="langimg" src="img/lang_graph.png" alt="">
-            <div class="langitem">
+      </div>
+  <div class="side">
+    <div class="twobox">
+         <div id="language">
+           <h2>学習言語</h2>
+           
+           <div id="piechart"></div>
+           <div class="langitem">
               <div id="langitem1">
                 <div id="langitem1-1">
                   <div id="maru"></div>
@@ -83,12 +174,12 @@
                   <div id="maru"></div>
                   <p id="itemp">情報システム基礎知識（その他）</p>
                 </div>
-              </div>
+              </div> 
             </div>
           </div>
           <div id="contents">
             <h2>学習コンテンツ</h2>
-            <img class="contimg" src="img/cont_graph.png" alt="">
+            <div id="piechart2"></div>
             <div class="contitem">
               <div id="contitem1">
                 <div id="contitem1-1">
@@ -109,11 +200,15 @@
           </div>
         </div> 
       </div>
-  </div>
+    </div>
+    
+  
+
+  
 
   <footer>
     <p><span>＜</span>　2020年　10月　<span>＞</span></p>
   </footer>
-  
+  <script src="./top.js"></script>
 </body>
 </html>

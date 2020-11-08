@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="load.css">
+</head>
+<body>
+
+<div class="content">
+  <a class="js-modal-open" href="">クリックでモーダルを表示</a>
+</div>
+<div class="modal js-modal">
+  <div class="modal__bg js-modal-close"></div>
+  <div class="modal__content">
+    <div id="loader-bg">
+     
+      <div id="loader">
+        <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." />
+         <p>Now Loading...</p>
+      </div>
+    
+    </div>
+    
+    <div id="wrap">
+      ロード後に表示させたい内容
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+      var h = $(window).height();
+      
+      $('#wrap').css('display','none');
+      $('#loader-bg ,#loader').height(h).css('display','block');
+    });
+      
+    $(window).load(function () { //全ての読み込みが完了したら実行
+      $('#loader-bg').delay(900).fadeOut(800);
+      $('#loader').delay(600).fadeOut(300);
+      $('#wrap').css('display', 'block');
+    });
+      
+    //10秒たったら強制的にロード画面を非表示
+    $(function(){
+      setTimeout('stopload()',10000);
+    });
+      
+    function stopload(){
+      $('#wrap').css('display','block');
+      $('#loader-bg').delay(900).fadeOut(800);
+      $('#loader').delay(600).fadeOut(300);
+    }
+    </script>
+      <a class="js-modal-close" href="">閉じる</a>
+  </div><!--modal__inner-->
+</div><!--modal-->
+
+</body>
+</html>
