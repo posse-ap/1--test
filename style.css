@@ -1,0 +1,73 @@
+div p {
+    display: inline-block;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header {
+	background-color: aqua;
+	height: 120px;
+}
+
+.container {
+	display: flex;
+	height: 200px;
+}
+
+.main {
+	background-color: fuchsia;
+	width: 70%;
+}
+
+.side {
+	background-color: darkorange;
+	width: 30%;
+}
+
+footer {
+	background-color: chartreuse;
+	height: 100px;
+}
+
+.threebox {
+	display: flex;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#today {
+	width: 100px;
+	height: 80px;
+	background-color: cyan;
+	margin-right: 10px;
+}
+
+#month {
+	width: 100px;
+	height: 80px;
+	background-color: cyan;
+	margin-right: 10px;
+}
+
+#total {
+	width: 100px;
+	height: 80px;
+	background-color: cyan;
+}
+
+.graph {
+	width: 100px;
+	height: 70px;
+	background-color: cyan;
+	margin-right: 10px;
+	/* マージンライトとは何か。そして、どう使っていけば良いのか。*/
+}
+
